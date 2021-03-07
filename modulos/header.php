@@ -10,7 +10,7 @@
                     <div class="row align-items-center no-gutters">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <img src="img/logo.png" alt="">
                                 </a>
                             </div>
@@ -19,7 +19,7 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">inicio</a></li>
+                                        <li><a class="active" href="index.php">inicio</a></li>
                                         <li><a href="package.html">Package</a></li>
                                         <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
@@ -41,12 +41,7 @@
                                     <i class="flaticon-user"></i>
                                     <span>accede</span>
                                 </a>
-                                <div class="live_chat_btn">
-                                    <a class="boxed_btn_green" href="#">
-                                        <i class="flaticon-chat"></i>
-                                        <span>Live Chat</span>
-                                    </a>
-                                </div>
+                              
                             </div>
                         </div>
                         <div class="col-12">
