@@ -20,17 +20,17 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a class="active" href="index.php">inicio</a></li>
-                                        <li><a href="package.html">Package</a></li>
+                                        <li><a href="package.php">Package</a></li>
                                         <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
+                                                <li><a href="blog.php">blog</a></li>
+                                                <li><a href="single-blog.php">single-blog</a></li>
                                             </ul>
                                         </li>
                                     
-                                        <li><a href="Support.html">Support</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="Support.php">Support</a></li>
+                                        <li><a href="about.php">About</a></li>
+                                        <li><a href="contact.php">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
