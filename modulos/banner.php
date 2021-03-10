@@ -5,8 +5,8 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-xl-9">
                         <div class="slider_text text-center">
-                            <p>The Best Domain & Hosting Provider In The Area</p>
-                            <h3>Go Big with your next Domain</h3>
+                            <p>El lugar donde inicia tu salud mental</p>
+                            <h3>Psicogenesis</h3>
                             <div class="find_dowmain">
                                 <form action="#" class="find_dowmain_form">
                                     <input type="text" placeholder="Find your domain">

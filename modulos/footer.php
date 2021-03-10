@@ -38,13 +38,13 @@
                     <div class="col-xl-3 col-md-6 col-lg-3">
                         <div class="footer_widget">
                             <h3 class="footer_title">
-                                service
+                                servicios
                             </h3>
                             <ul>
-                                <li><a href="#">Hosting</a></li>
-                                <li><a href="#">Domain</a></li>
-                                <li><a href="#">Wordpress</a></li>
-                                <li><a href="#">Shared Hosting</a></li>
+                                <li><a href="#">Talleres</a></li>
+                                <li><a href="#">Podcast</a></li>
+                                <li><a href="#">Consultas</a></li>
+                               
                             </ul>
 
                         </div>
@@ -55,10 +55,10 @@
                                 Navigation
                             </h3>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Rooms</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">News</a></li>
+                                <li><a href="index.php">Home</a></li>
+                                <li><a href="blog.php">Blogs</a></li>
+                                <li><a href="about.php">About</a></li>
+                                
                             </ul>
                         </div>
                     </div>
