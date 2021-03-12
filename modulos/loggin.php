@@ -3,7 +3,7 @@
             <div class="popup_inner">
                 <div class="logo text-center">
                     <a href="#">
-                        <img src="img/form-logo.png" alt="">
+                        <img src="img/psicogenesis2.png" alt="">
                     </a>
                 </div>
                 <h3>Inicia Sesión  <b>(Solo para personal autorizado) </b></h3>

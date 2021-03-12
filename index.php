@@ -71,7 +71,7 @@
                                         <div class="icon pink"><i class="flaticon-cerebro"></i></div>
                                         <div class="features_info">
                                             <h4>
-                                            Neuropsicologia
+                                            Neuropsicología
                                             </h4>
                                             <p>Es una rama de la Neurociencia que estudia las relaciones entre el cerebro y la conducta tanto en sujetos 
                                             sanos como en los que han sufrido algún tipo de daño cerebral.</p>
@@ -157,8 +157,8 @@
             <div class="row">
                 <div class="col-xl-5 col-md-8">
                     <div class="support_info">
-                        <h3>Psicogenesis</h3>
-                        <p>La psicologia es tan diversa como la mente humana y el limite es tu imaginación</p>
+                        <h3>Psicogénesis</h3>
+                        <p>La psicología es tan diversa como la mente humana y el límite es tu imaginación</p>
                         <div class="get_started">
                             <a class="boxed_btn_green" href="#">
                                 <span>Solicita tu consulta</span>
@@ -190,7 +190,7 @@
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <i class="flaticon-signo-de-pregunta"></i> Cuanto dura una sesion de psicoterapia?
+                                        <i class="flaticon-signo-de-pregunta"></i> ¿Cuánto dura una sesión de psicoterapia?
                                     </button>
                                 </h5>
                             </div>
@@ -206,7 +206,7 @@
                                     <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        <i class="flaticon-signo-de-pregunta"></i> Cual es el tiempo de tratamiento en una psicoterapia?
+                                        <i class="flaticon-signo-de-pregunta"></i> ¿Cuál es el tiempo de tratamiento en una psicoterapia?
                                     </button>
                                 </h5>
                             </div>
@@ -223,7 +223,7 @@
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        <i class="flaticon-signo-de-pregunta"></i>Cuantas sesiones voy a necesitar?
+                                        <i class="flaticon-signo-de-pregunta"></i>¿Cuántas sesiones voy a necesitar?
                                     </button>
                                 </h5>
                             </div>
@@ -239,14 +239,13 @@
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapse_4" aria-expanded="false" aria-controls="collapse_4">
-                                        <i class="flaticon-signo-de-pregunta"></i> Que tipos de servicios ofrece?
+                                        <i class="flaticon-signo-de-pregunta"></i>¿Qué tipos de servicios ofrece?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapse_4" class="collapse" aria-labelledby="heading_4" data-parent="#accordion">
                                 <div class="card-body">
                                     <ul>
-                                        <li>Psicología clínica.</li>
                                         <li>Psicología clínica.</li>
                                         <li>Psiquiatría.</li>
                                         <li>Terapia de pareja.</li>
@@ -261,14 +260,14 @@
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapse_5" aria-expanded="false" aria-controls="collapse_5">
-                                        <i class="flaticon-signo-de-pregunta"></i> Cual es el costo de la consulta?</span>
+                                        <i class="flaticon-signo-de-pregunta"></i> ¿Cuál es el costo de la consulta?</span>
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapse_5" class="collapse" aria-labelledby="heading_5" data-parent="#accordion">
                                 <div class="card-body">
                                 La terapia es una inversión que te ayuda a tener mejores trabajos, mejores amigos, además de valorar y cuidar lo que eres y lo que tienes. 
-                                El costo de una consulta es de $700 pesos menos
+                                El costo de una consulta es de $500 pesos menos
                                 </div>
                             </div>
                             
@@ -278,7 +277,7 @@
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapse_6" aria-expanded="false" aria-controls="collapse_6">
-                                        <i class="flaticon-signo-de-pregunta"></i> Se realiza consulta en linea?</span>
+                                        <i class="flaticon-signo-de-pregunta"></i> ¿Se realiza consulta en linea?</span>
                                     </button>
                                 </h5>
                             </div>
@@ -317,7 +316,7 @@
                     <div class="single_news">
                         <div class="thumb">
                             <a href="#">
-                                <img src="img/news/1.png" alt="">
+                                <img src="img/news/taller.png" alt="">
                             </a>
                         </div>
                         <div class="news_content">
@@ -326,7 +325,7 @@
                             </div>-->
                             <h3><a href="#">Talleres
                                     </a></h3>
-                            <p class="news_info">Se precentan diversos talleres de psicologia</p>
+                            <p class="news_info">Se presentan diversos talleres de psicología</p>
                         </div>
                     </div>
                 </div>
@@ -334,7 +333,7 @@
                     <div class="single_news">
                         <div class="thumb">
                             <a href="#">
-                                <img src="img/news/2.png" alt="">
+                                <img src="img/news/conferencia.png" alt="">
                             </a>
                         </div>
                         <div class="news_content">
@@ -342,7 +341,7 @@
                                 <a href="#">12 Jun, 2019 in <span>Hosting tips</span> </a>
                             </div> -->
                             <h3><a href="#">Conferencias</a></h3>
-                            <p class="news_info">Conferencias de psicologia dado por expertos en la materia</p>
+                            <p class="news_info">Conferencias de psicología dado por expertos en la materia</p>
                         </div>
                     </div>
                 </div>
@@ -350,7 +349,7 @@
                     <div class="single_news">
                         <div class="thumb">
                             <a href="#">
-                                <img src="img/news/3.png" alt="">
+                                <img src="img/news/podcast.png" alt="">
                             </a>
                         </div>
                         <div class="news_content">
@@ -358,7 +357,7 @@
                                 <a href="#">12 Jun, 2019 in <span>Hosting tips</span> </a>
                             </div>-->
                             <h3><a href="#">Podcast</a></h3>
-                            <p class="news_info">Podcast de psicologia de lunes a viernes</p>
+                            <p class="news_info">Podcast de psicología de lunes a viernes</p>
                         </div>
                     </div>
                 </div>
