@@ -3,25 +3,25 @@
         <div class="footer_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 col-lg-3">
+                    <div class="col-xl-6 col-md-6 col-lg-6">
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img src="img/logo.png" alt="">
+                                    <img src="img/psicogenesis9.png" alt="">
                                 </a>
                             </div>
-                            <p class="footer_text doanar"> <a class="first" href="#">+10 783 467 3789
+                            <p class="footer_text doanar"> <a class="first" href="#">+52 622 103 0001
                                 </a> <br>
-                                <a href="#">hostza@support.com</a></p>
+                                <a href="#">sociedaddepsicologiaguaymas@gmail.com</a></p>
                             <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a target="_blank" href="https://www.facebook.com/SociedaddePsicologiaClinicayAplicada/">
                                             <i class="fa fa-facebook-square"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a target="_blank" href="https://www.instagram.com/psicologoclinicoonline_/?hl=es-la">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                     </li>
@@ -52,28 +52,17 @@
                     <div class="col-xl-2 col-md-6 col-lg-2">
                         <div class="footer_widget">
                             <h3 class="footer_title">
-                                Navigation
+                                Navegación
                             </h3>
                             <ul>
-                                <li><a href="index.php">Home</a></li>
+                                <li><a href="index.php">Inicio</a></li>
                                 <li><a href="blog.php">Blogs</a></li>
-                                <li><a href="about.php">About</a></li>
+                                <li><a href="about.php">Nosotros</a></li>
                                 
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-lg-4">
-                        <div class="footer_widget">
-                            <h3 class="footer_title">
-                                Newsletter
-                            </h3>
-                            <form action="#" class="newsletter_form">
-                                <input type="text" placeholder="Enter your mail">
-                                <button type="submit">Sign Up</button>
-                            </form>
-                            <p class="newsletter_text">Subscribe newsletter to get updates</p>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

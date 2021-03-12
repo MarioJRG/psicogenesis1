@@ -11,7 +11,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
                                 <a href="index.php">
-                                    <img src="img/logo.png" alt="">
+                                    <img src="img/psicogenesis9.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                                         </li>
                                     
                                         <li><a href="Support.php">Support</a></li>
-                                        <li><a href="about.php">About</a></li>
+                                        <li><a href="about.php">Nosotros</a></li>
                                         <li><a href="contact.php">Contact</a></li>
                                     </ul>
                                 </nav>

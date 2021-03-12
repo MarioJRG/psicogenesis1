@@ -6,7 +6,7 @@
                     <div class="col-xl-9">
                         <div class="slider_text text-center">
                             <p>El lugar donde inicia tu salud mental</p>
-                            <h3>Psicogenesis</h3>
+                            <h3>Psicogénesis</h3>
                             <div class="find_dowmain">
                                 <form action="#" class="find_dowmain_form">
                                     <input type="text" placeholder="Find your domain">
