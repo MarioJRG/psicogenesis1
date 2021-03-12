@@ -4,6 +4,7 @@
 
     <!-- header-start -->
     <header>
+    
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
                 <div class="container-fluid p-0">
@@ -41,7 +42,18 @@
                                     <i class="flaticon-user"></i>
                                     <span>accede</span>
                                 </a>
-                              
+                                <?php
+                                if(isset( $_SESSION['user'])){
+
+                               
+                                ?>
+                                 <div class="live_chat_btn">
+                                    <a class="boxed_btn_green" href="modulos/logout.php">
+                                        
+                                        <span>Logout</span>
+                                    </a>
+                                </div>
+                              <?php }?> 
                             </div>
                         </div>
                         <div class="col-12">

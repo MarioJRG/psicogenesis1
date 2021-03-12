@@ -1,13 +1,36 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<?php include("modulos/head.php") ?>
+<?php 
+include_once ('modulos/user_session.php');
+$userSession = new UserSession();
+include("modulos/head.php"); ?>
 
 <body>
     
-<?php include("modulos/header.php"); ?>
+<?php
+
+include("modulos/header.php"); ?>
 
 <?php include("modulos/banner.php"); ?>
+<?php include_once ('modulos/user.php');?>
+<?php 
+
+$user= new Users();
+if (isset( $_SESSION['user'])) {
+    
+}else if (isset( $_POST['correo']) && isset( $_POST['contraseña'])){
+    $correoForm=$_POST['correo'];
+    $contraseñaForm=$_POST['contraseña'];
+    if ($user ->userExists($correoForm,$contraseñaForm)) {
+       $userSession -> setCurrentUser($correoForm);
+      
+    }
+   
+}
+?>
+
+
 
  
     <!-- core_features_start -->
