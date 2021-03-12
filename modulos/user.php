@@ -8,7 +8,7 @@ class Users extends DB {
             $md5pass = md5($pass);
 
             $query = this -> connect() -> prepare('SELECT * FROM login WHERE correo = :user AND contraseña = :pass');
-            $query -> execute(['user' =>$user,'contraseña' => $pass])
+            $query -> execute(['user' =>$user,'contraseña' => $pass]);
 
 
         }
