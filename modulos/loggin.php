@@ -1,4 +1,4 @@
-<form id="test-form"  action="index.php" class="white-popup-block mfp-hide" method="POST">
+<form id="test-form"  action="modulos/comprobante.php" class="white-popup-block mfp-hide" method="POST">
         <div class="popup_box ">
             <div class="popup_inner">
                 <div class="logo text-center">
@@ -7,7 +7,7 @@
                     </a>
                 </div>
                 <h3>Inicia Sesión  <b>(Solo para personal autorizado) </b></h3>
-                <form action="index.php" method="POST">
+                <form action="modulos/comprobante.php" method="POST">
                     <div class="row">
                         <div class="col-xl-12 col-md-12">
                             <input type="email" placeholder="Correo electrónico" name="correo">

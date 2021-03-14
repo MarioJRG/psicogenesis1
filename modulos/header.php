@@ -43,6 +43,9 @@
                                     <span>accede</span>
                                 </a>
                                 <?php
+                                
+                                include_once ('modulos/user_session.php');
+                                $userSession = new UserSession();
                                 if(isset( $_SESSION['user'])){
 
                                
@@ -53,6 +56,7 @@
                                         <span>Logout</span>
                                     </a>
                                 </div>
+                              
                               <?php }?> 
                             </div>
                         </div>

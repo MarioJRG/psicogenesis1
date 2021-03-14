@@ -13,6 +13,7 @@ class Users extends DB {
 
             if($query->rowCount()){
                 return true;
+                
             }else{
                 return false;
             }
@@ -20,7 +21,7 @@ class Users extends DB {
 
         }
         public function setUser($user){
-            $query = this -> connect() -> prepare('SELECT * FROM login WHERE correo = :user');
+            $query = $this -> connect() -> prepare('SELECT * FROM login WHERE correo = :user');
             $query -> execute(['user' =>$user]);
 
             foreach ($query as $currentUser) {
