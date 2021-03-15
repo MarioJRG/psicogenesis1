@@ -3,6 +3,10 @@
         <![endif]-->
 
     <!-- header-start -->
+    <?php
+    include_once ('modulos/user_session.php');
+    $userSession = new UserSession();
+    ?>
     <header>
     
         <div class="header-area ">
@@ -26,6 +30,12 @@
                                             <ul class="submenu">
                                                 <li><a href="blog.php">blog</a></li>
                                                 <li><a href="single-blog.php">single-blog</a></li>
+                                                <?php                           
+                                                        
+                                                    if(isset( $_SESSION['user'])){                                               
+                                                    ?>
+                                                    <li><a href="agregar_blog.php">agregar blog</a></li>
+                                                <?php } ?>
                                             </ul>
                                         </li>
                                     
@@ -38,14 +48,10 @@
                         </div>
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div class="log_chat_area d-flex align-items-center">
-                                <a href="#test-form" class="login popup-with-form">
-                                    <i class="flaticon-user"></i>
-                                    <span>accede</span>
-                                </a>
+                                
                                 <?php
                                 
-                                include_once ('modulos/user_session.php');
-                                $userSession = new UserSession();
+                                
                                 if(isset( $_SESSION['user'])){
 
                                
@@ -57,7 +63,12 @@
                                     </a>
                                 </div>
                               
-                              <?php }?> 
+                              <?php }else{?> 
+                                <a href="#test-form" class="login popup-with-form">
+                                    <i class="flaticon-user"></i>
+                                    <span>accede</span>
+                                </a>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="col-12">
