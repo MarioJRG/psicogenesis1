@@ -42,6 +42,15 @@
 							</div>
 
                      <div class="input-group-icon mt-10">
+                     <div class="icon"><i class="" aria-hidden="true"></i></div>
+                     <div class="form-select" id="default-select"">
+                     <label for="fname">Autor:</label>
+                        <input type="text" id="fname" name="fname">
+                        </div>
+                        </div>
+
+                        
+                     <div class="input-group-icon mt-10">
 								<div class="icon"><i class="fa fa-star" aria-hidden="true"></i></div>
 								<div class="form-select" id="default-select"">
 											<select>
