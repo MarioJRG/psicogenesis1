@@ -1,18 +1,20 @@
 <?php
 include ('db.php');
 class blog extends DB {
-    private $nombre;
+    private $autor;
     private $titulo;
     private $fecha;
     private $descripcion;
     private $blog;
+    private $categoria;
+
     private $imagen;
 
-    function guardar( $nombre, $titulo, $descripcion, $blog){
-        $query = $this ->connect() -> prepare ('INSERT INTO blogs (nombre,titulo,descripcion,blog) 
-        VALUES(:nombre,:titulo,:descripcion,:blog)');
-        $query ->execute(['nombre'=>$nombre,'titulo'=>$titulo,'descripcion'=>$descripcion,
-        'blog'=>$blog]);
+    function guardar( $autor, $titulo, $descripcion, $blog,$categoria,$fecha){
+        $query = $this ->connect() -> prepare ('INSERT INTO blogs (autor,titulo,descripcion,blog,categoria,fecha) 
+        VALUES(:autor,:titulo,:descripcion,:blog,:categoria,:fecha)');
+        $query ->execute(['autor'=>$autor,'titulo'=>$titulo,'descripcion'=>$descripcion,
+        'blog'=>$blog,'categoria'=>$categoria,'fecha'=>$fecha]);
         if ($query) {
             return true;
         }  

@@ -2,10 +2,11 @@
 include_once('blogController.php');
 
 $blog = new blog();
-
-//if($blog -> guardar('Mario','Jesus','Ruiz ','Gonzlaez')){
-  //  echo 'ser agrego';
-//}
+date_default_timezone_set('America/Hermosillo');
+$fecha_actual=date("Y-m-d H:i:s");
+if($blog -> guardar('Mario','Jesus','Ruiz ','Gonzlaez','Familia',$fecha_actual)){
+    echo "ser agrego";
+}
 $allblog = $blog -> verBlogs();
 //foreach ($allblog as $sblog) {
   //  echo $sblog;

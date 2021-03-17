@@ -19,6 +19,7 @@
      <!-- bradcam_area_end -->
 
    <!--================Blog Area =================-->
+   <form action="agregar_blog.php" method="post">
    <section class="blog_area single-post-area section-padding">
       <div class="container">
          <div class="row">
@@ -28,6 +29,37 @@
                   <div class="blog_details">
                      <h2>Escribir nuevo blog
                      </h2>
+
+                     <div class="input-group-icon mt-10">
+                     <div class="icon"><i class="" aria-hidden="true"></i></div>
+                     <div class="form-select" id="default-select"">
+                     <label for="autor">Autor:</label>
+                        <input type="text" id="autor" name="autor">
+                        </div>
+                        </div>
+
+                        <div class="input-group-icon mt-10">
+                     <div class="icon"><i class="" aria-hidden="true"></i></div>
+                     <div class="form-select" id="default-select"">
+                     <label for="titulo">Titulo:</label>
+                        <input type="text" id="titulo" name="titulo">
+                        </div>
+                        </div>
+
+
+                     <div class="input-group-icon mt-10">
+								<div class="icon"><i class="fa fa-star" aria-hidden="true"></i></div>
+								<div class="form-select" id="default-select"">
+											<select name='categoria'>
+												
+									<option value="familia y pareja">Familia y Pareja</option>
+									<option value="crianza positiva">Crianza Positiva</option>
+									<option value="neuropsicologia">Neuropsicologia</option>
+									<option value="vida laboral">Vida Laboral</option>
+									</select>
+								</div>
+							</div>
+                  <!--
                      <div class="input-group-icon mt-10">
 								<div class="icon"><i class="fa fa-user" aria-hidden="true"></i></div>
 								<div class="form-select" id="default-select"">
@@ -40,43 +72,54 @@
 									</select>
 								</div>
 							</div>
+-->
+                     <div class="col-12 mt-10">
+                           <div class="form-group">
+                              <textarea class="form-control w-100" name="descripcion" id="descripcion" cols="15" rows="6"
+                                 placeholder="Escribe una breve descripcion"></textarea>
+                           </div>
+                     </div>
 
-                     <div class="input-group-icon mt-10">
-                     <div class="icon"><i class="" aria-hidden="true"></i></div>
-                     <div class="form-select" id="default-select"">
-                     <label for="fname">Autor:</label>
-                        <input type="text" id="fname" name="fname">
-                        </div>
-                        </div>
-
-                        
-                     <div class="input-group-icon mt-10">
-								<div class="icon"><i class="fa fa-star" aria-hidden="true"></i></div>
-								<div class="form-select" id="default-select"">
-											<select>
-												<option value=" 1">Categoría</option>
-									<option value="1">Dhaka</option>
-									<option value="1">Dilli</option>
-									<option value="1">Newyork</option>
-									<option value="1">Islamabad</option>
-									</select>
-								</div>
-							</div>
+                 
 
 							<div class="col-12 mt-10">
                            <div class="form-group">
-                              <textarea class="form-control w-100" name="contenido" id="contenido" cols="30" rows="9"
+                              <textarea class="form-control w-100" name="blog" id="blog" cols="30" rows="9"
                                  placeholder="Escribe el contenido de tu blog..."></textarea>
                            </div>
                      </div>
+                     
                      <div class="form-group">
-                        <button type="submit" class="button button-contactForm btn_1 boxed-btn">Publicar</button>
+                        <button type="submit" name='subirBlog' class="button button-contactForm btn_1 boxed-btn">Publicar</button>
                      </div>
                      
                   </div>
                </div>
-               
-            
+               </form>      
+            <?php
+               include_once('modulos/blogController.php');
+
+               $blogG = new blog();
+               date_default_timezone_set('America/Hermosillo');
+               $fecha_actual=date("Y-m-d H:i:s");
+               if(isset($_REQUEST['subirBlog'])){
+                  if (isset($_POST['autor'])&&isset($_POST['titulo'])&&isset($_POST['categoria'])&&
+                  isset($_POST['descripcion'])&&isset($_POST['blog'])){
+                     $autor=$_POST['autor'];
+                     $titulo=$_POST['titulo'];
+                     $categoria=$_POST['categoria'];
+                     $descripcion=$_POST['descripcion'];
+                     $blog=$_POST['blog'];
+                     if($blogG -> guardar($autor,$titulo,$descripcion,$blog,$categoria,$fecha_actual)){
+                        echo '<Script> alert("Guardado")</Script>';
+                     }else{
+                        echo '<Script> alert("error")</Script>';
+                     }
+                  }else{
+                     echo '<Script> alert("error")</Script>';
+                  }
+               }
+            ?>
             </div>
             <div class="col-lg-4">
                <div class="blog_right_sidebar">
