@@ -25,27 +25,67 @@
             <div class="row">
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
+                    <?php 
+                    include_once('modulos/blogController.php');
+
+                    $blog = new blog();
+                    $allblog = $blog -> verBlogs();
+                    foreach ($allblog as $sblog) {
+                            ?>
+
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_1.png" alt="">
+                                <img alt='' class="card-img rounded-0" src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
                                 <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
+                                <?php  
+                                    $date=substr($sblog['fecha'],8,-15);
+                                    $day=substr($sblog['fecha'],5,-19);
+                                    if ($day=='01') {
+                                        $day='Enero';
+                                    }elseif ($day=='02') {
+                                        $day='Febrero';
+                                    }elseif ($day=='03') {
+                                        $day='Marzo';
+                                    }elseif ($day=='04') {
+                                        $day='Abril';
+                                    }elseif ($day=='05') {
+                                        $day='Mayo';
+                                    }elseif ($day=='06') {
+                                        $day='Junio';
+                                    }elseif ($day=='07') {
+                                        $day='Julio';
+                                    }elseif ($day=='08') {
+                                        $day='Agosto';
+                                    }elseif ($day=='09') {
+                                        $day='Septiembre';
+                                    }elseif ($day=='10') {
+                                        $day='Octubre';
+                                    }elseif ($day=='11') {
+                                        $day='Noviembre';
+                                    }elseif ($day=='12') {
+                                        $day='Diciembre';
+                                    }
+
+                                ?>
+                                    <h3><?php echo $date?></h3>
+                                    <p><?php echo $day?></p>
                                 </a>
                             </div>
-
                             <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
+                                <a class="d-inline-block" href="single-blog.php?id=<?php echo $sblog['id']?>">
+                                    <h2><?php echo $sblog['titulo']?></h2>
                                 </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <p><?php echo $sblog['descripcion']?></p>
                                 <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i><?php echo $sblog['autor']?></a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> <?php echo $sblog['categoria']?></a></li>
                                 </ul>
                             </div>
                         </article>
+
+                        <?php 
+                    }                            
+                            ?>
 
                         <article class="blog_item">
                             <div class="blog_item_img">
