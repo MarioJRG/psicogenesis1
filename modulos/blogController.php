@@ -10,11 +10,14 @@ class blog extends DB {
 
     private $imagen;
 
-    function guardar( $autor, $titulo, $descripcion, $blog,$categoria,$fecha){
+    function guardar( $autor, $titulo, $descripcion, $blog,$categoria,$fecha,$nombreimg,$imagen,$tipoimg){
         
         
-        $query = $this ->connect() -> prepare ('INSERT INTO blogs (autor,titulo,descripcion,blog,categoria,fecha) 
-        VALUES(:autor,:titulo,:descripcion,:blog,:categoria,:fecha)');
+        $query = $this ->connect() -> prepare ('INSERT INTO blogs 
+        (autor,titulo,descripcion,blog,categoria,fecha,nombreimg,imagen,tipoimg) 
+VALUES(:autor,:titulo,:descripcion,:blog,:categoria,:fecha,:nombreimg,:imagen,:tipoimg)');
+
+            
 
         $query ->bindParam(':autor',$autor,PDO::PARAM_STR);
         $query ->bindParam(':titulo',$titulo,PDO::PARAM_STR);
@@ -22,6 +25,9 @@ class blog extends DB {
         $query ->bindParam(':blog',$blog,PDO::PARAM_STR);
         $query ->bindParam(':categoria',$categoria,PDO::PARAM_STR);
         $query ->bindParam(':fecha',$fecha,PDO::PARAM_STR);
+        $query ->bindParam(':nombreimg',$nombreimg,PDO::PARAM_STR);
+        $query ->bindParam(':imagen',$imagen,PDO::PARAM_LOB);
+        $query ->bindParam(':tipoimg',$tipoimg,PDO::PARAM_STR);
 
         $query->execute();
        // $query ->execute(['autor'=>$autor,'titulo'=>$titulo,'descripcion'=>$descripcion,

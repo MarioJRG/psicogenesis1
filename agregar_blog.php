@@ -19,7 +19,7 @@
      <!-- bradcam_area_end -->
 
    <!--================Blog Area =================-->
-   <form action="agregar_blog.php" method="post">
+   <form action="agregar_blog.php" method="post" enctype='multipart/form-data'> 
    <section class="blog_area single-post-area section-padding">
       <div class="container">
          <div class="row">
@@ -73,6 +73,8 @@
 								</div>
 							</div>
 -->
+<label for="img">Subir Imagen:</label>
+<input type="file" name="img" >
                      <div class="col-12 mt-10">
                            <div class="form-group">
                               <textarea class="form-control w-100" name="descripcion" id="descripcion" cols="15" rows="6"
@@ -110,7 +112,16 @@
                      $categoria=$_POST['categoria'];
                      $descripcion=$_POST['descripcion'];
                      $blog=$_POST['blog'];
-                     if($blogG -> guardar($autor,$titulo,$descripcion,$blog,$categoria,$fecha_actual)){
+
+                     $cargarFoto = $_FILES['img']['tmp_name'];
+                     $tipoImg = $_FILES['img']['type'];
+                     $nombreImg = $_FILES['img']['name'];
+                     $foto1 = fopen($_FILES['img']['tmp_name'],'rb');
+                     $tamaño= $_FILES['img']['size'];
+                     $foto=fread($foto1,$tamaño);
+                     $foto3 = addslashes(file_get_contents($_FILES['img']['tmp_name']));
+
+                     if($blogG -> guardar($autor,$titulo,$descripcion,$blog,$categoria,$fecha_actual,$nombreImg,$foto,$tipoImg)){
                         echo '<Script> alert("Guardado")</Script>';
                      }else{
                         echo '<Script> alert("error")</Script>';
