@@ -29,7 +29,7 @@
                                         <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="blog.php">blog</a></li>
-                                                <li><a href="single-blog.php">single-blog</a></li>
+                                                <!--<li><a href="single-blog.php">single-blog</a></li>-->
                                                 <?php                           
                                                         
                                                     if(isset( $_SESSION['user'])){                                               

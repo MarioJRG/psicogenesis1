@@ -26,7 +26,8 @@ if (isset($_REQUEST['guardar'])) {
     echo "ser agrego";
 }
 }
-$allblog = $blog -> verBlogs();
+$id = 27;
+$allblog = $blog -> oneBlog($id);
 foreach ($allblog as $sblog) {
   ?>
   <img src="data:<?php echo$sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">

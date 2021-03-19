@@ -20,51 +20,32 @@
 
    <!--================Blog Area =================-->
    <section class="blog_area single-post-area section-padding">
+   <?php
+   include_once('modulos/blogController.php');
+   $id = $_GET['id'];
+   $blog = new blog();
+   $oneblog = $blog -> oneBlog($id);
+   foreach ($oneblog as $sblog){
+   ?>
       <div class="container">
          <div class="row">
             <div class="col-lg-8 posts-list">
                <div class="single-post">
                   <div class="feature-img">
-                     <img class="img-fluid" src="img/blog/single_blog_1.png" alt="">
+                     <img class="img-fluid" alt=""src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
                   </div>
                   <div class="blog_details">
-                     <h2>Second divided from form fish beast made every of seas
-                        all gathered us saying he our
+                     <h2>
+                     <?php echo $sblog['titulo'] ?>
                      </h2>
                      <ul class="blog-info-link mt-3 mb-4">
-                        <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i><?php echo $sblog['autor'] ?></a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i><?php echo $sblog['categoria'] ?></a></li>
                      </ul>
                      <p class="excert">
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                        should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                        fraction of the camp price. However, who has the willpower
+                     <?php echo $sblog['blog'] ?>
                      </p>
-                     <p>
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                        should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                        fraction of the camp price. However, who has the willpower to actually sit through a
-                        self-imposed MCSE training. who has the willpower to actually
-                     </p>
-                     <div class="quote-wrapper">
-                        <div class="quotes">
-                           MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at
-                           a fraction of the camp price. However, who has the willpower to actually sit through a
-                           self-imposed MCSE training.
-                        </div>
-                     </div>
-                     <p>
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                        should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                        fraction of the camp price. However, who has the willpower
-                     </p>
-                     <p>
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                        should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                        fraction of the camp price. However, who has the willpower to actually sit through a
-                        self-imposed MCSE training. who has the willpower to actually
-                     </p>
+                     
                   </div>
                </div>
                <div class="navigation-top">
@@ -72,6 +53,10 @@
                      <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
                         people like this</p>
                      <div class="col-sm-4 text-center my-2 my-sm-0">
+                     <?php
+   }
+
+                     ?>
                         <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
                      </div>
                      <ul class="social-icons">
@@ -81,13 +66,24 @@
                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
                      </ul>
                   </div>
+
+                  <?php 
+                         $blogNext = new blog();
+                         $blogPrev = new blog();
+
+                         $infNext=  $id + 1;
+
+                         $infPrev=  $id - 1;
+                         $blogAnt = $blogPrev -> oneBlog($infPrev);
+                           foreach ($blogAnt as $sblog){
+                        ?>
                   <div class="navigation-area">
                      <div class="row">
                         <div
                            class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                            <div class="thumb">
-                              <a href="#">
-                                 <img class="img-fluid" src="img/post/preview.png" alt="">
+                              <a href="single-blog.php?id=<?php echo $infPrev ?>">
+                                 <img class="img-fluid" alt=""  src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
                               </a>
                            </div>
                            <div class="arrow">
@@ -95,20 +91,31 @@
                                  <span class="lnr text-white ti-arrow-left"></span>
                               </a>
                            </div>
+
+                          
                            <div class="detials">
                               <p>Prev Post</p>
-                              <a href="#">
-                                 <h4>Space The Final Frontier</h4>
+                              <a href="single-blog.php?id=<?php echo $infPrev ?>">
+                                 <h4> <?php echo $sblog['titulo'] ?></h4>
                               </a>
                            </div>
                         </div>
+                        <?php
+                         }
+                        ?>
                         <div
+                       
                            class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                          <?php 
+                           $blogSig = $blogNext -> oneBlog($infNext);
+                           foreach ($blogSig as $sblog){
+                          ?>
                            <div class="detials">
                               <p>Next Post</p>
-                              <a href="#">
-                                 <h4>Telescopes 101</h4>
+                              <a href="single-blog.php?id=<?php echo $infNext ?>">
+                                 <h4><?php echo $sblog['titulo'] ?></h4>
                               </a>
+                              
                            </div>
                            <div class="arrow">
                               <a href="#">
@@ -116,10 +123,13 @@
                               </a>
                            </div>
                            <div class="thumb">
-                              <a href="#">
-                                 <img class="img-fluid" src="img/post/next.png" alt="">
+                              <a href="single-blog.php?id=<?php echo $infNext ?>">
+                                 <img class="img-fluid" alt="" src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
                               </a>
                            </div>
+                           <?php
+                         }
+                        ?>
                         </div>
                      </div>
                   </div>

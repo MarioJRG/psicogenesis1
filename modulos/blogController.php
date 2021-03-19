@@ -43,6 +43,14 @@ VALUES(:autor,:titulo,:descripcion,:blog,:categoria,:fecha,:nombreimg,:imagen,:t
        return $all; 
     
     }
+
+    function oneBlog($id){
+        $query = $this ->connect() -> prepare ('SELECT * FROM blogs WHERE id = :id');
+        
+        $query->execute([':id'=>$id]);
+        $all =$query->fetchall(PDO::FETCH_ASSOC);
+        return $all; 
+    }
 }
 
 ?>
