@@ -52,10 +52,10 @@
 								<div class="form-select" id="default-select"">
 											<select name='categoria'>
 												
-									<option value="familia y pareja">Familia y Pareja</option>
-									<option value="crianza positiva">Crianza Positiva</option>
-									<option value="neuropsicologia">Neuropsicologia</option>
-									<option value="vida laboral">Vida Laboral</option>
+									<option value="Familia y pareja">Familia y Pareja</option>
+									<option value="Crianza positiva">Crianza Positiva</option>
+									<option value="Neuropsicologia">Neuropsicologia</option>
+									<option value="Vida laboral">Vida Laboral</option>
 									</select>
 								</div>
 							</div>
@@ -135,47 +135,7 @@
             <div class="col-lg-4">
                <div class="blog_right_sidebar">
                   
-                  <aside class="single_sidebar_widget post_category_widget">
-                     <h4 class="widget_title">Categorías</h4>
-                     <ul class="list cat-list">
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Resaurant food</p>
-                              <p>(37)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Travel news</p>
-                              <p>(10)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Modern technology</p>
-                              <p>(03)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Product</p>
-                              <p>(11)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Inspiration</p>
-                              <p>(21)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Health Care</p>
-                              <p>(21)</p>
-                           </a>
-                        </li>
-                     </ul>
-                  </aside>
+               <?php include("modulos/categorias.php"); ?>
                   
                </div>
             </div>

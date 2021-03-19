@@ -15,7 +15,7 @@ class blog extends DB {
         
         $query = $this ->connect() -> prepare ('INSERT INTO blogs 
         (autor,titulo,descripcion,blog,categoria,fecha,nombreimg,imagen,tipoimg) 
-VALUES(:autor,:titulo,:descripcion,:blog,:categoria,:fecha,:nombreimg,:imagen,:tipoimg)');
+        VALUES(:autor,:titulo,:descripcion,:blog,:categoria,:fecha,:nombreimg,:imagen,:tipoimg)');
 
             
 
@@ -51,6 +51,13 @@ VALUES(:autor,:titulo,:descripcion,:blog,:categoria,:fecha,:nombreimg,:imagen,:t
         $all =$query->fetchall(PDO::FETCH_ASSOC);
         return $all; 
     }
+    function contarCategorias(){
+        $query = $this -> connect() ->query('SELECT categoria, count(*) FROM blogs group by categoria');
+        $all= $query->fetchall(PDO::FETCH_ASSOC);
+        return $all; 
+     
+     }
+    
 }
 
 ?>
