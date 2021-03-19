@@ -83,7 +83,7 @@
                            class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                            <div class="thumb">
                               <a href="single-blog.php?id=<?php echo $infPrev ?>">
-                                 <img class="img-fluid" alt=""  src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
+                                 <img class="img-fluid" alt=""  src="img/post/preview.png">
                               </a>
                            </div>
                            <div class="arrow">
@@ -124,7 +124,7 @@
                            </div>
                            <div class="thumb">
                               <a href="single-blog.php?id=<?php echo $infNext ?>">
-                                 <img class="img-fluid" alt="" src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
+                                 <img class="img-fluid" alt="" src="img/post/next.png">
                               </a>
                            </div>
                            <?php
