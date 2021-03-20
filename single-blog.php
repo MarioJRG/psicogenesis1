@@ -11,22 +11,22 @@
     <!-- header-start -->
     <?php include("modulos/header.php"); ?>
      <!-- header-end -->
- 
-     <!-- bradcam_area_start -->
-     <div class="bradcam_area breadcam_bg overlay2">
-         <h3>Single Blog</h3>
-     </div>
-     <!-- bradcam_area_end -->
-
-   <!--================Blog Area =================-->
-   <section class="blog_area single-post-area section-padding">
-   <?php
+     <?php
    include_once('modulos/blogController.php');
    $id = $_GET['id'];
    $blog = new blog();
    $oneblog = $blog -> oneBlog($id);
    foreach ($oneblog as $sblog){
    ?>
+     <!-- bradcam_area_start -->
+     <div class="bradcam_area breadcam_bg overlay2">
+         <h3><?php echo $sblog['titulo'] ?></h3>
+     </div>
+     <!-- bradcam_area_end -->
+
+   <!--================Blog Area =================-->
+   <section class="blog_area single-post-area section-padding">
+   
       <div class="container">
          <div class="row">
             <div class="col-lg-8 posts-list">
@@ -48,22 +48,18 @@
                      
                   </div>
                </div>
-               <div class="navigation-top">
-                  <div class="d-sm-flex justify-content-between text-center">
-                     <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
-                        people like this</p>
-                     <div class="col-sm-4 text-center my-2 my-sm-0">
                      <?php
-   }
+                        }
 
                      ?>
-                        <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
-                     </div>
+               <div class="navigation-top">
+                  <div class="d-sm-flex justify-content-between text-center">
+                     <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Psicogénesis</p>
+                     
                      <ul class="social-icons">
                         <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                      </ul>
                   </div>
 
@@ -146,118 +142,8 @@
                      </div>
                   </div>
                </div>
-               <div class="comments-area">
-                  <h4>05 Comments</h4>
-                  <div class="comment-list">
-                     <div class="single-comment justify-content-between d-flex">
-                        <div class="user justify-content-between d-flex">
-                           <div class="thumb">
-                              <img src="img/comment/comment_1.png" alt="">
-                           </div>
-                           <div class="desc">
-                              <p class="comment">
-                                 Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                 Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                              </p>
-                              <div class="d-flex justify-content-between">
-                                 <div class="d-flex align-items-center">
-                                    <h5>
-                                       <a href="#">Emilly Blunt</a>
-                                    </h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                 </div>
-                                 <div class="reply-btn">
-                                    <a href="#" class="btn-reply text-uppercase">reply</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="comment-list">
-                     <div class="single-comment justify-content-between d-flex">
-                        <div class="user justify-content-between d-flex">
-                           <div class="thumb">
-                              <img src="img/comment/comment_2.png" alt="">
-                           </div>
-                           <div class="desc">
-                              <p class="comment">
-                                 Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                 Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                              </p>
-                              <div class="d-flex justify-content-between">
-                                 <div class="d-flex align-items-center">
-                                    <h5>
-                                       <a href="#">Emilly Blunt</a>
-                                    </h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                 </div>
-                                 <div class="reply-btn">
-                                    <a href="#" class="btn-reply text-uppercase">reply</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="comment-list">
-                     <div class="single-comment justify-content-between d-flex">
-                        <div class="user justify-content-between d-flex">
-                           <div class="thumb">
-                              <img src="img/comment/comment_3.png" alt="">
-                           </div>
-                           <div class="desc">
-                              <p class="comment">
-                                 Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                 Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                              </p>
-                              <div class="d-flex justify-content-between">
-                                 <div class="d-flex align-items-center">
-                                    <h5>
-                                       <a href="#">Emilly Blunt</a>
-                                    </h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                 </div>
-                                 <div class="reply-btn">
-                                    <a href="#" class="btn-reply text-uppercase">reply</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="comment-form">
-                  <h4>Leave a Reply</h4>
-                  <form class="form-contact comment_form" action="#" id="commentForm">
-                     <div class="row">
-                        <div class="col-12">
-                           <div class="form-group">
-                              <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
-                                 placeholder="Write Comment"></textarea>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="form-group">
-                              <input class="form-control" name="name" id="name" type="text" placeholder="Name">
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="form-group">
-                              <input class="form-control" name="email" id="email" type="email" placeholder="Email">
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <div class="form-group">
-                              <input class="form-control" name="website" id="website" type="text" placeholder="Website">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="form-group">
-                        <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send Message</button>
-                     </div>
-                  </form>
-               </div>
+               
+               
             </div>
             <div class="col-lg-4">
                <div class="blog_right_sidebar">

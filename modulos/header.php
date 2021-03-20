@@ -24,7 +24,7 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.php">inicio</a></li>
+                                        <li><a href="index.php">inicio</a></li>
                                         <li><a href="package.php">Package</a></li>
                                         <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">

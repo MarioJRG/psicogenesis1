@@ -51,12 +51,24 @@ class blog extends DB {
         $all =$query->fetchall(PDO::FETCH_ASSOC);
         return $all; 
     }
+
     function contarCategorias(){
         $query = $this -> connect() ->query('SELECT categoria, count(*) FROM blogs group by categoria');
         $all= $query->fetchall(PDO::FETCH_ASSOC);
-        return $all; 
+        return $all;      
+    }
+
+    function eliminarBlog($id){
+        $query = $this -> connect() ->prepare('DELETE FROM blogs WHERE id=:id');
+        $query->execute([':id'=>$id]);
+        
+         if ($query) {
+             return true;
+         }             
+               
+    }
+
      
-     }
     
 }
 
