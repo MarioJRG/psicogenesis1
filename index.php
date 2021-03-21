@@ -395,7 +395,7 @@ $user= new Users();
             <h3>Realiza tu presupuesto</h3>
             <p>Entra a el siguiente link para realizar un aproximado del presupuesto de tu consulta.</p>
             <div class="chat">
-                <a class="boxed_btn_green" href="#">
+                <a class="boxed_btn_green" href="servicios.php">
                     <i class="flaticon-chat"></i>
                     <span>Presupuesto</span>
                 </a>

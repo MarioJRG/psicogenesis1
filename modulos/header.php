@@ -25,7 +25,7 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="index.php">inicio</a></li>
-                                        <li><a href="package.php">Package</a></li>
+                                        <li><a href="servicios.php">Servicios</a></li>
                                         <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="blog.php">blog</a></li>
@@ -41,7 +41,7 @@
                                     
                                         <li><a href="Support.php">Support</a></li>
                                         <li><a href="about.php">Nosotros</a></li>
-                                        <li><a href="contact.php">Contact</a></li>
+                                        <li><a href="contact.php">Contacto</a></li>
                                     </ul>
                                 </nav>
                             </div>
