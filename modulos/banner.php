@@ -8,13 +8,7 @@
                         <div class="slider_text text-center">
                             <p>El lugar donde inicia tu salud mental</p>
                             <h3>Psicogénesis</h3>
-                            <div class="find_dowmain">
-                                <form action="#" class="find_dowmain_form" method="GET">
-                                    <input type="text" name="busqueda" placeholder="Busca un blog...">
-                                    <button name="buscar" type="submit">buscar</button>
-                                    
-                                </form>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

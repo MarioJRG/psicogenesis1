@@ -68,15 +68,7 @@ class blog extends DB {
                
     }
 
-    function buscar($busqueda){
-        
-        $query = $this -> connect() ->prepare('SELECT * FROM blogs WHERE descripcion LIKE "%:busqueda%" ');
-        $query->execute([':busqueda'=>$busqueda]);
-        
-         if ($query) {
-             return true;
-         } 
-    }
+    
 
      
     
