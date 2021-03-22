@@ -1,37 +1,36 @@
 <?php
 
-    $to = "spn8@spondonit.com";
-    $from = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
-    $number = $_REQUEST['number'];
-    $cmessage = $_REQUEST['message'];
+    $para = "sociedaddepsicologiaguaymas@gmail.com";
+    $de = $_POST['email'];
+    $nombre = $_POST['name'];
+    $asunto = $_POST['subject']; 
+    $mensaje = $_POST['message'];
 
-    $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
+    $headers = "De: $para";
+	$headers = "De: " . $para . "\r\n";
+	$headers .= "Responder a: ". $para . "\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-    $subject = "You have a message from your Bitmap Photography.";
+    $asunto = "Mensaje de Psicogénesis.";
 
-    $logo = 'img/logo.png';
+    $logo = 'img/psicogenesis9.png';
     $link = '#';
 
-	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
+	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Correo Express</title></head><body>";
 	$body .= "<table style='width: 100%;'>";
 	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
 	$body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
 	$body .= "</td></tr></thead><tbody><tr>";
-	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
-	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
+	$body .= "<td style='border:none;'><strong>Nombre:</strong> {$nombre}</td>";
+	$body .= "<td style='border:none;'><strong>Correo electrónico:</strong> {$de}</td>";
 	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$csubject}</td></tr>";
+	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$asunto}</td></tr>";
 	$body .= "<tr><td></td></tr>";
-	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
+	$body .= "<tr><td colspan='2' style='border:none;'>{$mensaje}</td></tr>";
 	$body .= "</tbody></table>";
 	$body .= "</body></html>";
 
-    $send = mail($to, $subject, $body, $headers);
+    $send = mail($para, $asunto, $body, $headers);
 
 ?>

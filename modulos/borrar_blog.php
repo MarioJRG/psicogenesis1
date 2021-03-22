@@ -7,13 +7,17 @@ function eliminar (){
         
         $id=$_GET['id'];
         if ($blog ->eliminarBlog($id)) {
-           
-           header("Location: ../blog.php");   
+            
+            echo'<script type="text/javascript">
+            alert("Blog Eliminado");
+            window.location.href="../blog.php";
+            </script>';  
               
         }
-
+        
 }
-    header("Location: ../index.php");
+
+    
 
 }
 eliminar();

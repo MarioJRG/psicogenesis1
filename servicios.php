@@ -264,7 +264,7 @@
                             <div class="col-xl-6 col-md-8 col-lg-6">
                                 <div class="chat">
                                    
-                                    <a class="boxed_btn_green2" href="#">
+                                    <a class="boxed_btn_green2" href="contact.php">
                                             Enviar correo
                                     </a>
                                 </div>

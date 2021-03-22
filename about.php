@@ -15,7 +15,7 @@
 
     <!-- bradcam_area_start -->
     <div class="bradcam_area breadcam_bg overlay2">
-        <h3>About Us</h3>
+        <h3>Sobre Nosotros</h3>
     </div>
     <!-- bradcam_area_end -->
     <div class="about_area">
@@ -30,10 +30,8 @@
             </div>
             <div class="row mb-60">
                 <div class="col-xl-6">
-                    <p>For light wherein fly their he blessed seed behold fourth moveth face moving. Dry for also subdue
-                        dominion creepeth the may over fish very greater sixth to fill. Cattle you god heaven above
-                        moveth, night. There fruitful upon from fowl, that she’d day man unto that have all herb whose
-                        our void evening after under. You’ll sea wherein sea fruitful fill from.</p>
+                    <p>Psicogénesis se dedica a promover la educación continua en el área de la psicología clínica y 
+                        aplicada, para la constante actualización de los profesionales interesados en el área de la salud mental..</p>
                 </div>
                 <div class="col-xl-6">
                     <p>Dry for also subdue dominion creepeth the may over fish very greater sixth to fill. Cattle you

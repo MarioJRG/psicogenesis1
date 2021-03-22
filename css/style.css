@@ -72,6 +72,11 @@ button {
   outline: medium none;
 }
 
+.not-active { 
+  pointer-events: none; 
+  cursor: default; 
+} 
+
 /* line 39, C:/Users/SPN Graphics/Desktop/cl sep/HTML/scss/_reset.scss */
 h1, h2, h3, h4, h5 {
   font-family: "Roboto", sans-serif;

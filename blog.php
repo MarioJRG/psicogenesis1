@@ -79,7 +79,7 @@
                                 <p><?php echo $sblog['descripcion']?></p>
                                 <ul class="blog-info-link">
                                     <li><a href="#"><i class="fa fa-user"></i><?php echo $sblog['autor']?></a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> <?php echo $sblog['categoria']?></a></li>
+                                    <li><a href="#" class="not-active"><i class="fa fa-comments"></i> <?php echo $sblog['categoria']?></a></li>
                                 </ul>
                                 
                                 <?php                           

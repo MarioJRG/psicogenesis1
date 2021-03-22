@@ -10,9 +10,9 @@
                                     <img src="img/psicogenesis9.png" alt="">
                                 </a>
                             </div>
-                            <p class="footer_text doanar"> <a class="first" href="#">+52 622 103 0001
+                            <p class="footer_text doanar"> <a class="first" href="contact.php">+52 622 103 0001
                                 </a> <br>
-                                <a href="#">sociedaddepsicologiaguaymas@gmail.com</a></p>
+                                <a href="contact.php">sociedaddepsicologiaguaymas@gmail.com</a></p>
                             <div class="socail_links">
                                 <ul>
                                     <li>
