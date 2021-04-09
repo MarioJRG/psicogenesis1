@@ -26,7 +26,7 @@ if (isset($_REQUEST['guardar'])) {
     echo "ser agrego";
 }
 }
-$id = 30;
+$id = 29;
 $allblog = $blog -> oneBlog($id);
 foreach ($allblog as $sblog) {
   $date=substr($sblog['fecha'],8,-15);
