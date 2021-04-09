@@ -26,11 +26,15 @@ if (isset($_REQUEST['guardar'])) {
     echo "ser agrego";
 }
 }
-$id = 27;
+$id = 30;
 $allblog = $blog -> oneBlog($id);
 foreach ($allblog as $sblog) {
+  $date=substr($sblog['fecha'],8,-15);
+  $day=substr($sblog['fecha'],5,-19);
   ?>
-  <img src="data:<?php echo$sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
+   <h3><?php echo $date?></h3>
+    <p><?php echo $day?></p>
+ 
 <?php
     echo $sblog['tipoimg'];
 } 
