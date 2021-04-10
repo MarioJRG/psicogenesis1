@@ -68,7 +68,7 @@ class podcast extends DB {
                
     }
     function VerUltimosPodcast(){
-        $query = $this -> connect() ->query('SELECT * FROM podcast order by id desc limit 5');
+        $query = $this -> connect() ->query('SELECT * FROM podcasts order by id desc limit 5');
         $all= $query->fetchall(PDO::FETCH_ASSOC);
         return $all; 
     }
