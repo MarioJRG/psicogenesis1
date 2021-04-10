@@ -79,6 +79,8 @@
                                     <h2><?php echo $spodcast['titulo']?></h2>
                                 </a>
                                 <p><?php echo $spodcast['descripcion']?></p>
+                                <a class="excert" href="<?php echo $spodcast['enlace'] ?>">
+                                <?php echo $spodcast['enlace'] ?>
                                 <ul class="blog-info-link">
                                     <li><a href="#"><i class="fa fa-user"></i><?php echo $spodcast['autor']?></a></li>
                                     <li><a href="#" class="not-active"><i class="fa fa-comments"></i> <?php echo $spodcast['categoria']?></a></li>
@@ -135,43 +137,59 @@
                         <?php include("modulos/categoriasPodcast.php"); ?>
 
                         <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Recent Post</h3>
+                            <h3 class="widget_title">Blogs Recientes</h3>
+                            <?php 
+                           $topPodcast = $podcast -> VerUltimosPodcast();
+                           foreach ($topPodcast as $spodcast) {
+                                
+                            
+                            ?>
                             <div class="media post_item">
-                                <img src="img/post/post_1.png" alt="post">
+                           
+                                <img alt='' class="card-img rounded-0" src="data:<?php echo  $spodcast['tipoimg'] ?>;base64,<?php  echo base64_encode(  $spodcast['imagen'])?>"width="20px" height="50x">
                                 <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
+                                    <a href="single-blog.php?id=<?php echo $spodcast['id']?>">
+                                        <h3><?php  echo  $spodcast['titulo']?></h3>
                                     </a>
-                                    <p>January 12, 2019</p>
+                                    <?php  
+                                    $date2=substr( $spodcast['fecha'],8,-15);
+                                    $day2=substr( $spodcast['fecha'],5,-19);
+                                    $año=substr( $spodcast['fecha'],0,-22);
+                                    if ($day2=='01') {
+                                        $day2='Enero';
+                                    }elseif ($day2=='02') {
+                                        $day2='Febrero';
+                                    }elseif ($day2=='03') {
+                                        $day2='Marzo';
+                                    }elseif ($day2=='04') {
+                                        $day2='Abril';
+                                    }elseif ($day2=='05') {
+                                        $day2='Mayo';
+                                    }elseif ($day2=='06') {
+                                        $day2='Junio';
+                                    }elseif ($day2=='07') {
+                                        $day2='Julio';
+                                    }elseif ($day2=='08') {
+                                        $day2='Agosto';
+                                    }elseif ($day2=='09') {
+                                        $day2='Septiembre';
+                                    }elseif ($day2=='10') {
+                                        $day2='Octubre';
+                                    }elseif ($day2=='11') {
+                                        $day2='Noviembre';
+                                    }elseif ($day2=='12') {
+                                        $day2='Diciembre';
+                                    }
+
+                                ?>
+                                    <p><?php echo $date2?> <?php echo $day2?> del <?php echo $año?></p>
                                 </div>
                             </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_2.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_3.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_4.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
+                            <?php
+                        }
+                            ?>
+
+                            
                         </aside>
                        
 

@@ -67,6 +67,11 @@ class blog extends DB {
          }             
                
     }
+    function VerUltimos(){
+        $query = $this -> connect() ->query('SELECT * FROM blogs order by id desc limit 5');
+        $all= $query->fetchall(PDO::FETCH_ASSOC);
+        return $all; 
+    }
 
     
 
