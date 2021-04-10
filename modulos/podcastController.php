@@ -72,6 +72,13 @@ class podcast extends DB {
         $all= $query->fetchall(PDO::FETCH_ASSOC);
         return $all; 
     }
+    function verPaginadosPodcast($comienzo){
+        $query = $this ->connect() -> prepare ('SELECT * FROM podcasts order by id desc limit :comienzo,3');
+        
+        $query->execute([':comienzo'=>$comienzo]);
+        $all =$query->fetchall(PDO::FETCH_ASSOC);
+        return $all; 
+    }
 
     
 

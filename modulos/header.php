@@ -1,3 +1,5 @@
+
+<body>
 <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -26,14 +28,14 @@
                                     <ul id="navigation">
                                         <li><a href="index.php">inicio</a></li>
                                         <li><a href="servicios.php">Servicios</a></li>
-                                        <li><a href="blog.php">blog <?php if(isset( $_SESSION['user'])){?>
+                                        <li><a href="modulos/paginacion.php">blog <?php if(isset( $_SESSION['user'])){?>
                                         <i class="ti-angle-down"></i>
                                         <?php } ?></a>
                                             <?php                         
                                             if(isset( $_SESSION['user'])){                                               
                                             ?>
                                             <ul class="submenu">
-                                                <li><a href="blog.php">blog</a></li>
+                                                <li><a href="modulos/paginacion.php">blog</a></li>
                                                 <!--<li><a href="single-blog.php">single-blog</a></li>-->
                                                 
                                                     <li><a href="agregar_blog.php">agregar blog</a></li>
@@ -42,14 +44,14 @@
                                             <?php } ?>
                                         </li>
                                     
-                                        <li><a href="podcasts.php">podcast <?php if(isset( $_SESSION['user'])){?>
+                                        <li><a href="modulos/paginacionPoc.php"">podcast <?php if(isset( $_SESSION['user'])){?>
                                         <i class="ti-angle-down"></i><?php } ?></a>
                                         <?php                           
                                                         
                                                     if(isset( $_SESSION['user'])){                                               
                                                     ?>
                                             <ul class="submenu">
-                                                <li><a href="podcasts.php">podcast</a></li>
+                                                <li><a href="modulos/paginacionPoc.php">podcast</a></li>
                                                 <!--<li><a href="single-blog.php">single-blog</a></li>-->
                                                 <?php                           
                                                         

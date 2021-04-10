@@ -30,7 +30,12 @@
 
                     $podcast = new podcast();
                     $allpodcast = $podcast -> verPodcasts();
-                    foreach ($allpodcast as $spodcast) {
+                    $count = count($allpodcast); 
+                    $paginas = ceil($count/ 3);
+                    $iniciar = ($_GET['pagina']-1)*3;
+                    
+                    $trepodcast = $podcast -> verPaginadosPodcast( $iniciar);
+                    foreach ($trepodcast as $spodcast) {
                             ?>
 
                         <article class="blog_item">
@@ -107,22 +112,23 @@
                             ?>
 
                       
-                        
-                        <nav class="blog-pagination justify-content-center d-flex">
+
+<nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Previous">
+                                <li class="page-item <?php echo $_GET['pagina']<=1? 'disabled':''?>">
+                                    <a href="blog.php?pagina=<?php echo $_GET['pagina']-1?>" class="page-link" aria-label="Previous">
                                         <i class="ti-angle-left"></i>
                                     </a>
                                 </li>
+                                <?php for ($i=0; $i < $paginas; $i++) { 
+                                    
+                                ?> 
                                 <li class="page-item">
-                                    <a href="#" class="page-link">1</a>
+                                    <a href="blog.php?pagina=<?php echo $i +1?>" class="page-link"><?php echo $i +1?> </a>
                                 </li>
-                                <li class="page-item active">
-                                    <a href="#" class="page-link">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Next">
+                                <?php }?> 
+                                <li class="page-item <?php echo $_GET['pagina']>=$paginas? 'disabled':''?>">
+                                    <a href="blog.php?pagina=<?php echo $_GET['pagina']+1?>" class="page-link" aria-label="Next">
                                         <i class="ti-angle-right"></i>
                                     </a>
                                 </li>
@@ -146,7 +152,7 @@
                             ?>
                             <div class="media post_item">
                            
-                                <img alt='' class="card-img rounded-0" src="data:<?php echo  $spodcast['tipoimg'] ?>;base64,<?php  echo base64_encode(  $spodcast['imagen'])?>"width="20px" height="50x">
+                                
                                 <div class="media-body">
                                     <a href="single-blog.php?id=<?php echo $spodcast['id']?>">
                                         <h3><?php  echo  $spodcast['titulo']?></h3>

@@ -161,7 +161,7 @@
                             ?>
                             <div class="media post_item">
                            
-                                <img alt='' class="card-img rounded-0" src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>"width="20px" height="50x">
+                               
                                 <div class="media-body">
                                     <a href="single-blog.php?id=<?php echo $sblog['id']?>">
                                         <h3><?php  echo $sblog['titulo']?></h3>

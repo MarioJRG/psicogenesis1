@@ -73,7 +73,13 @@ class blog extends DB {
         return $all; 
     }
 
-    
+    function verPaginados($comienzo){
+        $query = $this ->connect() -> prepare ('SELECT * FROM blogs order by id desc limit :comienzo,4');
+        
+        $query->execute([':comienzo'=>$comienzo]);
+        $all =$query->fetchall(PDO::FETCH_ASSOC);
+        return $all; 
+    }
 
      
     
