@@ -26,20 +26,40 @@
                                     <ul id="navigation">
                                         <li><a href="index.php">inicio</a></li>
                                         <li><a href="servicios.php">Servicios</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                        <li><a href="blog.php">blog <?php if(isset( $_SESSION['user'])){?>
+                                        <i class="ti-angle-down"></i>
+                                        <?php } ?></a>
+                                            <?php                         
+                                            if(isset( $_SESSION['user'])){                                               
+                                            ?>
                                             <ul class="submenu">
                                                 <li><a href="blog.php">blog</a></li>
+                                                <!--<li><a href="single-blog.php">single-blog</a></li>-->
+                                                
+                                                    <li><a href="agregar_blog.php">agregar blog</a></li>
+                                                
+                                            </ul>
+                                            <?php } ?>
+                                        </li>
+                                    
+                                        <li><a href="podcasts.php">podcast <?php if(isset( $_SESSION['user'])){?>
+                                        <i class="ti-angle-down"></i><?php } ?></a>
+                                        <?php                           
+                                                        
+                                                    if(isset( $_SESSION['user'])){                                               
+                                                    ?>
+                                            <ul class="submenu">
+                                                <li><a href="podcasts.php">podcast</a></li>
                                                 <!--<li><a href="single-blog.php">single-blog</a></li>-->
                                                 <?php                           
                                                         
                                                     if(isset( $_SESSION['user'])){                                               
                                                     ?>
-                                                    <li><a href="agregar_blog.php">agregar blog</a></li>
+                                                    <li><a href="agregar_podcast.php">agregar podcast</a></li>
                                                 <?php } ?>
                                             </ul>
+                                            <?php } ?>
                                         </li>
-                                    
-                                        <li><a href="Support.php">Support</a></li>
                                         <li><a href="about.php">Nosotros</a></li>
                                         <li><a href="contact.php">Contacto</a></li>
                                     </ul>

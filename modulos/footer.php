@@ -21,12 +21,12 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/psicologoclinicoonline_/?hl=es-la">
+                                        <a href="#">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a target="_blank" href="https://www.instagram.com/psicologoclinicoonline_/?hl=es-la">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
@@ -41,8 +41,8 @@
                                 servicios
                             </h3>
                             <ul>
-                                <li><a href="#">Talleres</a></li>
-                                <li><a href="#">Podcast</a></li>
+                                <li><a href="servicios.php">Talleres</a></li>
+                                <li><a href="podcasts.php">Podcast</a></li>
                                 <li><a href="#">Consultas</a></li>
                                
                             </ul>

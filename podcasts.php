@@ -4,21 +4,20 @@
 <?php include("modulos/head.php") ?>
 
 <body>
-    
+
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
     <!-- header-start -->
     <?php include("modulos/header.php"); ?>
-        <!-- header-end -->
-        
-        <!-- bradcam_area_start -->
-        <div class="bradcam_area breadcam_bg overlay2">
-                <h3>blog</h3>
-            </div>
-            <!-- bradcam_area_end -->
+    <!-- header-end -->
 
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg overlay2">
+        <h3>Podcasts</h3>
+    </div>
+    <!-- bradcam_area_end -->
 
     <!--================Blog Area =================-->
     <section class="blog_area section-padding">
@@ -27,23 +26,23 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
                     <?php 
-                    include_once('modulos/blogController.php');
+                    include_once('modulos/podcastController.php');
 
-                    $blog = new blog();
-                    $allblog = $blog -> verBlogs();
-                    foreach ($allblog as $sblog) {
+                    $podcast = new podcast();
+                    $allpodcast = $podcast -> verPodcasts();
+                    foreach ($allpodcast as $spodcast) {
                             ?>
 
                         <article class="blog_item">
                             <div class="blog_item_img">
-                            <a href="single-blog.php?id=<?php echo $sblog['id']?>">
-                            <img alt='' class="card-img rounded-0" src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
+                            <a href="single-podcast.php?id=<?php echo $spodcast['id']?>">
+                            <img alt='' class="card-img rounded-0" src="data:<?php echo $spodcast['tipoimg'] ?>;base64,<?php  echo base64_encode( $spodcast['imagen'])?>">
                             </a>
                                 
                                 <a href="#" class="blog_item_date">
                                 <?php  
-                                    $date=substr($sblog['fecha'],8,-15);
-                                    $day=substr($sblog['fecha'],5,-19);
+                                    $date=substr($spodcast['fecha'],8,-15);
+                                    $day=substr($spodcast['fecha'],5,-19);
                                     if ($day=='01') {
                                         $day='Enero';
                                     }elseif ($day=='02') {
@@ -76,13 +75,13 @@
                                 </a>
                             </div>
                             <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.php?id=<?php echo $sblog['id']?>">
-                                    <h2><?php echo $sblog['titulo']?></h2>
+                                <a class="d-inline-block" href="single-podcast.php?id=<?php echo $spodcast['id']?>">
+                                    <h2><?php echo $spodcast['titulo']?></h2>
                                 </a>
-                                <p><?php echo $sblog['descripcion']?></p>
+                                <p><?php echo $spodcast['descripcion']?></p>
                                 <ul class="blog-info-link">
-                                    <li><a href="#" class="not-active"><i class="fa fa-user"></i><?php echo $sblog['autor']?></a></li>
-                                    <li><a href="#" class="not-active"><i class="fa fa-comments"></i> <?php echo $sblog['categoria']?></a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i><?php echo $spodcast['autor']?></a></li>
+                                    <li><a href="#" class="not-active"><i class="fa fa-comments"></i> <?php echo $spodcast['categoria']?></a></li>
                                 </ul>
                                 
                                 <?php                           
@@ -92,7 +91,7 @@
                                
                                 <div class="button-group-area mt-10">
                                     
-                                    <a href="modulos/borrar_blog.php?id=<?php echo $sblog['id']?>" class="mt-10 genric-btn danger-border circle">Eliminar Blog</a>                                    
+                                    <a href="modulos/borrar_podcast.php?id=<?php echo $spodcast['id']?>" class="mt-10 genric-btn danger-border circle">Eliminar Podcast</a>                                    
                                     
                                 </div>
                                 
@@ -133,7 +132,7 @@
                     <div class="blog_right_sidebar">
                         
 
-                        <?php include("modulos/categorias.php"); ?>
+                        <?php include("modulos/categoriasPodcast.php"); ?>
 
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Recent Post</h3>
@@ -186,6 +185,8 @@
         </div>
     </section>
     <!--================Blog Area =================-->
+
+
 
    <!-- footer -->
    <?php include("modulos/footer.php"); ?>
