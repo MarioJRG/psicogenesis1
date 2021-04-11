@@ -12,7 +12,7 @@
     <!-- header-start -->
     <?php include("modulos/header.php"); ?>
         <!-- header-end -->
-         
+        
         <!-- bradcam_area_start -->
         <div class="bradcam_area breadcam_bg overlay2">
                 <h3>blog</h3>
@@ -41,41 +41,41 @@
 
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <a href="single-blog.php?id=<?php echo $sblog['id']?>">
-                                <img class="card-img rounded-0" src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
-                                </a>
+                            <a href="single-blog.php?id=<?php echo $sblog['id']?>">
+                            <img alt='' class="card-img rounded-0" src="data:<?php echo $sblog['tipoimg'] ?>;base64,<?php  echo base64_encode( $sblog['imagen'])?>">
+                            </a>
                                 
                                 <a href="#" class="blog_item_date">
-                                    <?php  
-                                        $date=substr($sblog['fecha'],8,-15);
-                                        $day=substr($sblog['fecha'],5,-19);
-                                        if ($day=='01') {
-                                            $day='Enero';
-                                        }elseif ($day=='02') {
-                                            $day='Febrero';
-                                        }elseif ($day=='03') {
-                                            $day='Marzo';
-                                        }elseif ($day=='04') {
-                                            $day='Abril';
-                                        }elseif ($day=='05') {
-                                            $day='Mayo';
-                                        }elseif ($day=='06') {
-                                            $day='Junio';
-                                        }elseif ($day=='07') {
-                                            $day='Julio';
-                                        }elseif ($day=='08') {
-                                            $day='Agosto';
-                                        }elseif ($day=='09') {
-                                            $day='Septiembre';
-                                        }elseif ($day=='10') {
-                                            $day='Octubre';
-                                        }elseif ($day=='11') {
-                                            $day='Noviembre';
-                                        }elseif ($day=='12') {
-                                            $day='Diciembre';
-                                        }
+                                <?php  
+                                    $date=substr($sblog['fecha'],8,-15);
+                                    $day=substr($sblog['fecha'],5,-19);
+                                    if ($day=='01') {
+                                        $day='Enero';
+                                    }elseif ($day=='02') {
+                                        $day='Febrero';
+                                    }elseif ($day=='03') {
+                                        $day='Marzo';
+                                    }elseif ($day=='04') {
+                                        $day='Abril';
+                                    }elseif ($day=='05') {
+                                        $day='Mayo';
+                                    }elseif ($day=='06') {
+                                        $day='Junio';
+                                    }elseif ($day=='07') {
+                                        $day='Julio';
+                                    }elseif ($day=='08') {
+                                        $day='Agosto';
+                                    }elseif ($day=='09') {
+                                        $day='Septiembre';
+                                    }elseif ($day=='10') {
+                                        $day='Octubre';
+                                    }elseif ($day=='11') {
+                                        $day='Noviembre';
+                                    }elseif ($day=='12') {
+                                        $day='Diciembre';
+                                    }
 
-                                    ?>
+                                ?>
                                     <h3><?php echo $date?></h3>
                                     <p><?php echo $day?></p>
                                 </a>
@@ -84,7 +84,7 @@
                                 <a class="d-inline-block" href="single-blog.php?id=<?php echo $sblog['id']?>">
                                     <h2><?php echo $sblog['titulo']?></h2>
                                 </a>
-                                <p> <?php echo $sblog['descripcion']?></p>
+                                <p><?php echo $sblog['descripcion']?></p>
                                 <ul class="blog-info-link">
                                     <li><a href="#" class="not-active"><i class="fa fa-user"></i><?php echo $sblog['autor']?></a></li>
                                     <li><a href="#" class="not-active"><i class="fa fa-comments"></i> <?php echo $sblog['categoria']?></a></li>
@@ -100,9 +100,11 @@
                                 
                             </div>
                         </article>
+
                         <?php 
                          }                            
                          ?>
+
                       
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
@@ -136,10 +138,7 @@
                             $topblog = $blog ->VerUltimos();
                             foreach($topblog as $sblog){                                                            
                             ?>
-                            <div class="media post_item">
-                           
-                                <img src="img/post/post_1.png" alt="post">
-                                                    
+                            <div class="media post_item">                           
                                 <div class="media-body">
                                     <a href="single-blog.php?id=<?php echo $sblog['id']?>">
                                         <h3><?php  echo $sblog['titulo']?></h3>
@@ -181,7 +180,8 @@
                             <?php
                               }
                             ?>                            
-                        </aside>                                              
+                        </aside> 
+                                                                     
                     </div>
                 </div>
             </div>

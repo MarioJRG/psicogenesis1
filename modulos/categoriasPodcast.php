@@ -7,7 +7,7 @@
                              ?>
                             <?php foreach ($allcat as $scat) { ?>
                                 <li>
-                                    <a href="#" class="d-flex">
+                                    <a href="#" class="d-flex not-active">
                                         <p><?php echo $scat['categoria'];?></p>
                                         <p>(<?php echo $scat['count(*)'];?>)</p>
                                     </a>

@@ -30,32 +30,48 @@
                      <h2>Escribir nuevo blog
                      </h2>
 
+                     <h4>Información del autor:</h4>
                      <div class="input-group-icon mt-10">
-                     <div class="icon"><i class="" aria-hidden="true"></i></div>
-                     <div class="form-select" id="default-select"">
-                     <label for="autor">Autor:</label>
-                        <input type="text" id="autor" name="autor">
+                        <div class="icon"><i class="" aria-hidden="true"></i></div>
+                        <div class="form-select" id="default-select"">
+                           <label for="autor">Nombre del Autor:</label>
+                           <input type="text" id="autor" name="autor">
                         </div>
-                        </div>
+                     </div>
 
-                        <div class="input-group-icon mt-10">
-                     <div class="icon"><i class="" aria-hidden="true"></i></div>
-                     <div class="form-select" id="default-select"">
-                     <label for="titulo">Titulo:</label>
-                        <input type="text" id="titulo" name="titulo">
+                     <div class="col-12 mt-10">
+                           <div class="form-group">
+                              <textarea class="form-control w-100" name="descripcionAutor" id="descripcionAutor" cols="15" rows="6"
+                                 placeholder="Escribe una breve descripción del autor"></textarea>
+                           </div>
+                     </div>
+
+                     <label for="img2">Subir Imagen del Autor:</label>
+                     <input type="file" name="img2" >
+
+                     <div class="col-12 mt-30">
+                     <!-- espacio -->
+                     </div>
+                     
+                     <h4>Información del blog:</h4>
+                     <div class="input-group-icon mt-10">
+                        <div class="icon"><i class="" aria-hidden="true"></i></div>
+                        <div class="form-select" id="default-select"">
+                           <label for="titulo">Titulo:</label>
+                           <input type="text" id="titulo" name="titulo">
                         </div>
-                        </div>
+                     </div>
 
 
                      <div class="input-group-icon mt-10">
 								<div class="icon"><i class="fa fa-star" aria-hidden="true"></i></div>
 								<div class="form-select" id="default-select"">
-											<select name='categoria'>
+									<select name='categoria'>
 												
-									<option value="Familia y pareja">Familia y Pareja</option>
-									<option value="Crianza positiva">Crianza Positiva</option>
-									<option value="Neuropsicologia">Neuropsicologia</option>
-									<option value="Vida laboral">Vida Laboral</option>
+                              <option value="Familia y pareja">Familia y Pareja</option>
+                              <option value="Crianza positiva">Crianza Positiva</option>
+                              <option value="Neuropsicologia">Neuropsicologia</option>
+                              <option value="Vida laboral">Vida Laboral</option>
 									</select>
 								</div>
 							</div>
@@ -72,9 +88,10 @@
 									</select>
 								</div>
 							</div>
--->
-<label for="img">Subir Imagen:</label>
-<input type="file" name="img" >
+               -->
+               <label for="img">Subir Imagen:</label>
+               <input type="file" name="img" >
+
                      <div class="col-12 mt-10">
                            <div class="form-group">
                               <textarea class="form-control w-100" name="descripcion" id="descripcion" cols="15" rows="6"
@@ -105,9 +122,19 @@
                date_default_timezone_set('America/Hermosillo');
                $fecha_actual=date("Y-m-d H:i:s");
                if(isset($_REQUEST['subirBlog'])){
-                  if (isset($_POST['autor'])&&isset($_POST['titulo'])&&isset($_POST['categoria'])&&
+                  if (isset($_POST['autor'])&&isset($_POST['descripcionAutor'])&&isset($_POST['titulo'])&&isset($_POST['categoria'])&&
                   isset($_POST['descripcion'])&&isset($_POST['blog'])){
                      $autor=$_POST['autor'];
+                     $descripcionAutor=$_POST['descripcionAutor'];
+
+                     $cargarFotoA = $_FILES['img2']['tmp_name'];
+                     $tipoImgA = $_FILES['img2']['type'];
+                     $nombreImgA = $_FILES['img2']['name'];
+                     $fotoA = fopen($_FILES['img2']['tmp_name'],'rb');
+                     $tamañoA= $_FILES['img2']['size'];
+                     $fotoAutor=fread($fotoA,$tamañoA);
+                     $fotoFinalA = addslashes(file_get_contents($_FILES['img2']['tmp_name']));
+
                      $titulo=$_POST['titulo'];
                      $categoria=$_POST['categoria'];
                      $descripcion=$_POST['descripcion'];
@@ -121,7 +148,7 @@
                      $foto=fread($foto1,$tamaño);
                      $foto3 = addslashes(file_get_contents($_FILES['img']['tmp_name']));
 
-                     if($blogG -> guardar($autor,$titulo,$descripcion,$blog,$categoria,$fecha_actual,$nombreImg,$foto,$tipoImg)){
+                     if($blogG -> guardar($autor,$descripcionAutor,$nombreImgA,$fotoAutor,$tipoImgA,$titulo,$descripcion,$blog,$categoria,$fecha_actual,$nombreImg,$foto,$tipoImg)){
                         echo '<Script> alert("Guardado")</Script>';
                      }else{
                         echo '<Script> alert("error")</Script>';

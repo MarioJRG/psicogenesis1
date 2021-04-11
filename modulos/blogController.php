@@ -10,16 +10,20 @@ class blog extends DB {
 
     private $imagen;
 
-    function guardar( $autor, $titulo, $descripcion, $blog,$categoria,$fecha,$nombreimg,$imagen,$tipoimg){
+    function guardar( $autor,$descripcionAutor,$nombreimgA,$imagenA,$tipoimgA, $titulo, $descripcion, $blog,$categoria,$fecha,$nombreimg,$imagen,$tipoimg){
         
         
         $query = $this ->connect() -> prepare ('INSERT INTO blogs 
-        (autor,titulo,descripcion,blog,categoria,fecha,nombreimg,imagen,tipoimg) 
-        VALUES(:autor,:titulo,:descripcion,:blog,:categoria,:fecha,:nombreimg,:imagen,:tipoimg)');
+        (autor,descripcionAutor,nombreimgA,imagenA,tipoimgA,titulo,descripcion,blog,categoria,fecha,nombreimg,imagen,tipoimg) 
+        VALUES(:autor,:descripcionAutor,:nombreimgA,:imagenA,:tipoimgA,:titulo,:descripcion,:blog,:categoria,:fecha,:nombreimg,:imagen,:tipoimg)');
 
             
 
         $query ->bindParam(':autor',$autor,PDO::PARAM_STR);
+        $query ->bindParam(':descripcionAutor',$descripcionAutor,PDO::PARAM_STR);
+        $query ->bindParam(':nombreimgA',$nombreimgA,PDO::PARAM_STR);
+        $query ->bindParam(':imagenA',$imagenA,PDO::PARAM_LOB);
+        $query ->bindParam(':tipoimgA',$tipoimgA,PDO::PARAM_STR);
         $query ->bindParam(':titulo',$titulo,PDO::PARAM_STR);
         $query ->bindParam(':descripcion',$descripcion,PDO::PARAM_STR);
         $query ->bindParam(':blog',$blog,PDO::PARAM_STR);
