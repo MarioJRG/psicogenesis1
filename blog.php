@@ -12,7 +12,7 @@
     <!-- header-start -->
     <?php include("modulos/header.php"); ?>
         <!-- header-end -->
-        
+         
         <!-- bradcam_area_start -->
         <div class="bradcam_area breadcam_bg overlay2">
                 <h3>blog</h3>
@@ -150,7 +150,7 @@
                             ?>
                             <div class="media post_item">
                            
-                                
+                                <img src="img/post/post_1.png" alt="post">
                                 <div class="media-body">
                                     <a href="single-blog.php?id=<?php echo $sblog['id']?>">
                                         <h3><?php  echo $sblog['titulo']?></h3>
