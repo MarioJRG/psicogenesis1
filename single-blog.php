@@ -149,9 +149,9 @@
             <div class="col-lg-4">
                <div class="blog_right_sidebar">
                   
-               <?php include("modulos/categorias.php"); ?>
+                   <?php include("modulos/categorias.php"); ?>
 
-               <aside class="single_sidebar_widget popular_post_widget">
+                  <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Blogs Recientes</h3>
                             <?php 
                             $topblog = $blog ->VerUltimos();
@@ -159,10 +159,8 @@
                                 
                             
                             ?>
-                            <div class="media post_item">
-                           
-                               
-                                <div class="media-body">
+                           <div class="media post_item">                                                        
+                              <div class="media-body">
                                     <a href="single-blog.php?id=<?php echo $sblog['id']?>">
                                         <h3><?php  echo $sblog['titulo']?></h3>
                                     </a>
@@ -197,15 +195,13 @@
                                     }
 
                                 ?>
-                                    <p><?php echo $date2?> <?php echo $day2?> del <?php echo $año?></p>
-                                </div>
-                            </div>
+                               <p><?php echo $date2?> <?php echo $day2?> del <?php echo $año?></p>
+                              </div>
+                           </div>
                             <?php
-                        }
-                            ?>
-
-                            
-                        </aside>
+                           }
+                            ?>                            
+                  </aside>
                  
                   
                </div>

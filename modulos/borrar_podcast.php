@@ -10,7 +10,7 @@ function eliminar (){
             
             echo'<script type="text/javascript">
             alert("Podcast Eliminado");
-            window.location.href="../podcasts.php";
+            window.location.href="../podcasts.php?pagina=1";
             </script>';  
               
         }

@@ -107,15 +107,10 @@
                         </article>
 
                         <?php 
-                    }                            
+                         }                            
                             ?>
 
                       
-                        <?php 
-                       
-                        
-
-                        ?>
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item <?php echo $_GET['pagina']<=1? 'disabled':''?>">

@@ -35,9 +35,7 @@
                      <img class="img-fluid" alt=""src="data:<?php echo $spodcast['tipoimg'] ?>;base64,<?php  echo base64_encode( $spodcast['imagen'])?>">
                   </div>
                   <div class="blog_details">
-                     <h2>
-                     <?php echo $spodcast['titulo'] ?>
-                     </h2>
+                     <h2><?php echo $spodcast['titulo'] ?> </h2>
                      <ul class="blog-info-link mt-3 mb-4">
                         <li><a href="#"><i class="fa fa-user"></i><?php echo $spodcast['autor'] ?></a></li>
                         <li><a href="#"><i class="fa fa-comments"></i><?php echo $spodcast['categoria'] ?></a></li>

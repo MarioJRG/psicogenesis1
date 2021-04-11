@@ -10,7 +10,7 @@ function eliminar (){
             
             echo'<script type="text/javascript">
             alert("Blog Eliminado");
-            window.location.href="../blog.php";
+            window.location.href="../blog.php?pagina=1";
             </script>';  
               
         }

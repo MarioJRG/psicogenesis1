@@ -116,7 +116,7 @@
 <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item <?php echo $_GET['pagina']<=1? 'disabled':''?>">
-                                    <a href="blog.php?pagina=<?php echo $_GET['pagina']-1?>" class="page-link" aria-label="Previous">
+                                    <a href="podcasts.php?pagina=<?php echo $_GET['pagina']-1?>" class="page-link" aria-label="Previous">
                                         <i class="ti-angle-left"></i>
                                     </a>
                                 </li>
@@ -124,11 +124,11 @@
                                     
                                 ?> 
                                 <li class="page-item">
-                                    <a href="blog.php?pagina=<?php echo $i +1?>" class="page-link"><?php echo $i +1?> </a>
+                                    <a href="podcasts.php?pagina=<?php echo $i +1?>" class="page-link"><?php echo $i +1?> </a>
                                 </li>
                                 <?php }?> 
                                 <li class="page-item <?php echo $_GET['pagina']>=$paginas? 'disabled':''?>">
-                                    <a href="blog.php?pagina=<?php echo $_GET['pagina']+1?>" class="page-link" aria-label="Next">
+                                    <a href="podcasts.php?pagina=<?php echo $_GET['pagina']+1?>" class="page-link" aria-label="Next">
                                         <i class="ti-angle-right"></i>
                                     </a>
                                 </li>
@@ -143,7 +143,7 @@
                         <?php include("modulos/categoriasPodcast.php"); ?>
 
                         <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Blogs Recientes</h3>
+                            <h3 class="widget_title">Podcast Recientes</h3>
                             <?php 
                            $topPodcast = $podcast -> VerUltimosPodcast();
                            foreach ($topPodcast as $spodcast) {
@@ -154,7 +154,7 @@
                            
                                 
                                 <div class="media-body">
-                                    <a href="single-blog.php?id=<?php echo $spodcast['id']?>">
+                                    <a href="single-podcast.php?id=<?php echo $spodcast['id']?>">
                                         <h3><?php  echo  $spodcast['titulo']?></h3>
                                     </a>
                                     <?php  
