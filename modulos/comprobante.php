@@ -12,12 +12,20 @@ function comprobar (){
         $contraseñaForm=$_POST['contraseña'];
         if ($user ->userExists($correoForm,$contraseñaForm)) {
            $userSession -> setCurrentUser($correoForm);
-           header("Location: ../index.php");   
+           echo'<script type="text/javascript">
+            alert("Login Correcto");
+            window.location.href="../index.php";
+            </script>';    
               
+        }else{
+            echo'<script type="text/javascript">
+            alert("Login Incorrecto");
+            window.location.href="../index.php";
+            </script>';  
         }
 
 }
-    header("Location: ../index.php");
+    
 
 }
 comprobar();
