@@ -80,7 +80,7 @@
                <?php include("modulos/categoriasPodcast.php"); ?>
 
                <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Blogs Recientes</h3>
+                            <h3 class="widget_title">Podcast Recientes</h3>
                             <?php 
                            $topPodcast = $podcast -> VerUltimosPodcast();
                            foreach ($topPodcast as $spodcast) {

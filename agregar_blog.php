@@ -34,7 +34,7 @@
                      <div class="input-group-icon mt-10">
                         <div class="icon"><i class="" aria-hidden="true"></i></div>
                         <div class="form-select" id="default-select"">
-                           <label for="autor">Nombre del Autor:</label>
+                           <label for="autor">Nombre del autor:</label>
                            <input type="text" id="autor" name="autor">
                         </div>
                      </div>
@@ -46,7 +46,7 @@
                            </div>
                      </div>
 
-                     <label for="img2">Subir Imagen del Autor:</label>
+                     <label for="img2">Subir imagen del autor:</label>
                      <input type="file" name="img2" >
 
                      <div class="col-12 mt-30">
@@ -57,7 +57,7 @@
                      <div class="input-group-icon mt-10">
                         <div class="icon"><i class="" aria-hidden="true"></i></div>
                         <div class="form-select" id="default-select"">
-                           <label for="titulo">Titulo:</label>
+                           <label for="titulo">Título:</label>
                            <input type="text" id="titulo" name="titulo">
                         </div>
                      </div>
@@ -89,13 +89,13 @@
 								</div>
 							</div>
                -->
-               <label for="img">Subir Imagen:</label>
+               <label for="img">Subir imagen:</label>
                <input type="file" name="img" >
 
                      <div class="col-12 mt-10">
                            <div class="form-group">
                               <textarea class="form-control w-100" name="descripcion" id="descripcion" cols="15" rows="6"
-                                 placeholder="Escribe una breve descripcion"></textarea>
+                                 placeholder="Escribe una breve descripción..."></textarea>
                            </div>
                      </div>
 

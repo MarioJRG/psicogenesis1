@@ -91,7 +91,7 @@
             <div class="border-bottm">
                 <div class="row">
                     <div class="col-xl-12">
-                        <div class="section_title text-center pt-10">
+                        <div class="section_title text-center mb-20 pt-120">
                             <h3>Temas Principales</h3>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                                             <h4>
                                                 Familia y pareja
                                             </h4>
-                                            <p>Cuando uno se casa, la prioridad para el o para ella es su esposa o su esposo 
+                                            <p>Cuando uno se casa, la prioridad para él o para ella es su esposa o su esposo. 
                                             Esta prioridad se antepone a los hijos, y por supuesto a los padres de los esposos.</p>
                                         </div>
                                     </div>
@@ -134,9 +134,9 @@
                                         <div class="icon blue"><i class="flaticon-voto-positivo"></i></div>
                                         <div class="features_info">
                                             <h4>
-                                                 Crianza positiva    
+                                                 Crianza Positiva    
                                             </h4>
-                                            <p>El estilo de crianza positiva es un estilo de crianza que se basa en el respeto a los hijos,
+                                            <p>Es un estilo de crianza que se basa en el respeto a los hijos,
                                              en criar con amor y, sobre todo, en hacerlo a través de una conducta no violenta.</p>
                                         </div>
                                     </div>
@@ -167,57 +167,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <div class="single_features">
-                                        <div class="icon"><i class="flaticon-browser"></i></div>
-                                        <div class="features_info">
-                                            <h4>
-                                                Free Domain for 1st Year
-                                            </h4>
-                                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered
-                                                divide our let god moving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="single_features">
-                                        <div class="icon blue"><i class="flaticon-security"></i></div>
-                                        <div class="features_info">
-                                            <h4>
-                                                Free SSL Certificate
-                                            </h4>
-                                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered
-                                                divide our let god moving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="single_features">
-                                        <div class="icon pink"><i class="flaticon-like"></i></div>
-                                        <div class="features_info">
-                                            <h4>
-                                                30-Day Money-Back Guarantee
-                                            </h4>
-                                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered
-                                                divide our let god moving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="single_features">
-                                        <div class="icon yellow"><i class="flaticon-lock"></i></div>
-                                        <div class="features_info">
-                                            <h4>
-                                                Spam Protection
-                                            </h4>
-                                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered
-                                                divide our let god moving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
+                        
                         </div>
                     </div>
                 </div>

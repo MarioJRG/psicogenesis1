@@ -6,7 +6,7 @@
                         <img src="img/psicogenesis2.png" alt="">
                     </a>
                 </div>
-                <h3>Inicia Sesión  <b>(Solo para personal autorizado) </b></h3>
+                <h3>Inicia sesión  <b>(solo para personal autorizado) </b></h3>
                 <form action="modulos/comprobante.php" method="POST">
                     <div class="row">
                         <div class="col-xl-12 col-md-12">
@@ -16,7 +16,7 @@
                             <input type="password" placeholder="Contraseña" name="contraseña">
                         </div>
                         <div class="col-xl-12">
-                            <button type="submit" class="boxed_btn_green">Iniciar Sesión</button>
+                            <button type="submit" class="boxed_btn_green">Iniciar sesión</button>
                         </div>
                     </div>
                 </form>

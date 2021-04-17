@@ -72,7 +72,7 @@ $user= new Users();
                                             <h4>
                                                 Familia y pareja
                                             </h4>
-                                            <p>Cuando uno se casa, la prioridad para el o para ella es su esposa o su esposo 
+                                            <p>Cuando uno se casa, la prioridad para él o para ella es su esposa o su esposo. 
                                             Esta prioridad se antepone a los hijos, y por supuesto a los padres de los esposos.</p>
                                         </div>
                                     </div>
@@ -82,9 +82,9 @@ $user= new Users();
                                         <div class="icon blue"><i class="flaticon-voto-positivo"></i></div>
                                         <div class="features_info">
                                             <h4>
-                                                 Crianza positiva    
+                                                 Crianza Positiva    
                                             </h4>
-                                            <p>El estilo de crianza positiva es un estilo de crianza que se basa en el respeto a los hijos,
+                                            <p>Es un estilo de crianza que se basa en el respeto a los hijos,
                                              en criar con amor y, sobre todo, en hacerlo a través de una conducta no violenta.</p>
                                         </div>
                                     </div>
@@ -115,57 +115,7 @@ $user= new Users();
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <div class="single_features">
-                                        <div class="icon"><i class="flaticon-browser"></i></div>
-                                        <div class="features_info">
-                                            <h4>
-                                                Free Domain for 1st Year
-                                            </h4>
-                                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered
-                                                divide our let god moving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="single_features">
-                                        <div class="icon blue"><i class="flaticon-security"></i></div>
-                                        <div class="features_info">
-                                            <h4>
-                                                Free SSL Certificate
-                                            </h4>
-                                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered
-                                                divide our let god moving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="single_features">
-                                        <div class="icon pink"><i class="flaticon-like"></i></div>
-                                        <div class="features_info">
-                                            <h4>
-                                                30-Day Money-Back Guarantee
-                                            </h4>
-                                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered
-                                                divide our let god moving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="single_features">
-                                        <div class="icon yellow"><i class="flaticon-lock"></i></div>
-                                        <div class="features_info">
-                                            <h4>
-                                                Spam Protection
-                                            </h4>
-                                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered
-                                                divide our let god moving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
+                        
                         </div>
                     </div>
                 </div>
@@ -289,8 +239,8 @@ $user= new Users();
                             </div>
                             <div id="collapse_5" class="collapse" aria-labelledby="heading_5" data-parent="#accordion">
                                 <div class="card-body">
-                                La terapia es una inversión que te ayuda a tener mejores trabajos, mejores amigos, además de valorar y cuidar lo que eres y lo que tienes. 
-                                El costo de una consulta es de $500 pesos menos
+                                La terapia es una inversión que te ayuda a tener mejores trabajos y mejores amigos, además de valorar y cuidar lo que eres y lo que tienes. 
+                                El costo de una consulta es de $500 pesos aproximadamente.
                                 </div>
                             </div>
                             
@@ -300,13 +250,13 @@ $user= new Users();
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapse_6" aria-expanded="false" aria-controls="collapse_6">
-                                        <i class="flaticon-signo-de-pregunta"></i> ¿Se realiza consulta en linea?</span>
+                                        <i class="flaticon-signo-de-pregunta"></i> ¿Se realiza consulta en línea?</span>
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapse_6" class="collapse" aria-labelledby="heading_6" data-parent="#accordion">
                                 <div class="card-body">
-                                La ayuda psicológica en línea es un servicio de salud mental brindado por un psicólogo, pero a distancia. En una consulta online de este tipo el especialista y el paciente no están en el mismo lugar. Para que la terapia psicológica sea efectiva, se debe acudir a plataformas en Internet que ofrezcan el servicio.
+                                La ayuda psicológica en línea es un servicio de salud mental brindado por un psicólogo, pero a distancia. En una consulta online de este tipo, el especialista y el paciente no están en el mismo lugar. Para que la terapia psicológica sea efectiva, se debe acudir a plataformas en Internet que ofrezcan el servicio.
                                 </div>
                             </div>
                             
@@ -329,7 +279,7 @@ $user= new Users();
                         <h3>
                             Servicios
                         </h3>
-                        <p>Estos son los diferentes servicios que se ofrecen a la sociedad.
+                        <p>Estos son los diferentes servicios que se ofrecen a la sociedad:
                         </p>
                     </div>
                 </div>
@@ -364,7 +314,7 @@ $user= new Users();
                                 <a href="#">12 Jun, 2019 in <span>Hosting tips</span> </a>
                             </div> -->
                             <h3><a href="#">Conferencias</a></h3>
-                            <p class="news_info">Conferencias de psicología dado por expertos en la materia</p>
+                            <p class="news_info">Conferencias de psicología dadas por expertos en la materia</p>
                         </div>
                     </div>
                 </div>
@@ -393,7 +343,7 @@ $user= new Users();
     <div class="lets_launch launch_bg_1 overlay2">
         <div class="launch_text text-center">
             <h3>Realiza tu presupuesto</h3>
-            <p>Entra a el siguiente link para realizar un aproximado del presupuesto de tu consulta.</p>
+            <p>Entre al siguiente link para realizar un aproximado del presupuesto de tu consulta.</p>
             <div class="chat">
                 <a class="boxed_btn_green" href="servicios.php">
                     <i class="flaticon-chat"></i>
