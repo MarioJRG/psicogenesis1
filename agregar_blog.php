@@ -126,33 +126,54 @@
                   isset($_POST['descripcion'])&&isset($_POST['blog'])){
                      $autor=$_POST['autor'];
                      $descripcionAutor=$_POST['descripcionAutor'];
-
-                     $cargarFotoA = $_FILES['img2']['tmp_name'];
-                     $tipoImgA = $_FILES['img2']['type'];
-                     $nombreImgA = $_FILES['img2']['name'];
-                     $fotoA = fopen($_FILES['img2']['tmp_name'],'rb');
-                     $tamañoA= $_FILES['img2']['size'];
-                     $fotoAutor=fread($fotoA,$tamañoA);
-                     $fotoFinalA = addslashes(file_get_contents($_FILES['img2']['tmp_name']));
-
+              
                      $titulo=$_POST['titulo'];
                      $categoria=$_POST['categoria'];
                      $descripcion=$_POST['descripcion'];
                      $blog=$_POST['blog'];
+                     if(!empty($_FILES['img2']['name'])){
+                        $cargarFotoA = $_FILES['img2']['tmp_name'];
+                        $tipoImgA = $_FILES['img2']['type'];
+                        $nombreImgA = $_FILES['img2']['name'];
+                        $fotoA = fopen($_FILES['img2']['tmp_name'],'rb');
+                        $tamañoA= $_FILES['img2']['size'];
+                        $fotoAutor=fread($fotoA,$tamañoA);
+                        $fotoFinalA = addslashes(file_get_contents($_FILES['img2']['tmp_name']));
+                        if(!empty($_FILES['img']['name'])){
+                           $cargarFoto = $_FILES['img']['tmp_name'];
+                           $tipoImg = $_FILES['img']['type'];
+                           $nombreImg = $_FILES['img']['name'];
+                           $foto1 = fopen($_FILES['img']['tmp_name'],'rb');
+                           $tamaño= $_FILES['img']['size'];
+                           $foto=fread($foto1,$tamaño);
+                           $foto3 = addslashes(file_get_contents($_FILES['img']['tmp_name']));
 
-                     $cargarFoto = $_FILES['img']['tmp_name'];
-                     $tipoImg = $_FILES['img']['type'];
-                     $nombreImg = $_FILES['img']['name'];
-                     $foto1 = fopen($_FILES['img']['tmp_name'],'rb');
-                     $tamaño= $_FILES['img']['size'];
-                     $foto=fread($foto1,$tamaño);
-                     $foto3 = addslashes(file_get_contents($_FILES['img']['tmp_name']));
-
-                     if($blogG -> guardar($autor,$descripcionAutor,$nombreImgA,$fotoAutor,$tipoImgA,$titulo,$descripcion,$blog,$categoria,$fecha_actual,$nombreImg,$foto,$tipoImg)){
-                        echo '<Script> alert("Guardado")</Script>';
+                           if(empty($autor)){
+                              echo '<Script> alert("Falto nombre de autor")</Script>';
+                           }elseif(empty($descripcionAutor)){
+                              echo '<Script> alert("Falto Descripcion del Autor ")</Script>';
+                           }elseif(empty($titulo)){
+                              echo '<Script> alert("Falto titulo ")</Script>';
+                           }elseif(empty($descripcion)){
+                              echo '<Script> alert("Falto Descripcion")</Script>';
+                           }elseif(empty($blog)){
+                              echo '<Script> alert("Falto Contenido del blog")</Script>';
+                           }else{
+                              if($blogG -> guardar($autor,$descripcionAutor,$nombreImgA,$fotoAutor,$tipoImgA,$titulo,$descripcion,$blog,$categoria,$fecha_actual,$nombreImg,$foto,$tipoImg)){
+                                 echo '<Script> alert("Guardado")</Script>';
+                              }else{
+                                 echo '<Script> alert("error")</Script>';
+                              }
+                           }
+                        }else{
+                           echo '<Script> alert("Falta Imagen del Blog")</Script>';
+                        }                                              
                      }else{
-                        echo '<Script> alert("error")</Script>';
+                        echo '<Script> alert("Falta Imagen del autor")</Script>';
                      }
+                    
+
+                     
                   }else{
                      echo '<Script> alert("error")</Script>';
                   }

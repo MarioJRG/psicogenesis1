@@ -112,7 +112,9 @@
                      $categoria=$_POST['categoria'];
                      $descripcion=$_POST['descripcion'];
                      $enlace=$_POST['enlace'];
+                     if (!empty($_FILES['img']['name'])){
 
+                     
                      $cargarFoto = $_FILES['img']['tmp_name'];
                      $tipoImg = $_FILES['img']['type'];
                      $nombreImg = $_FILES['img']['name'];
@@ -120,14 +122,31 @@
                      $tamaño= $_FILES['img']['size'];
                      $foto=fread($foto1,$tamaño);
                      $foto3 = addslashes(file_get_contents($_FILES['img']['tmp_name']));
-
-                     if($podcastG -> guardar($autor,$titulo,$descripcion,$enlace,$categoria,$fecha_actual,$nombreImg,$foto,$tipoImg)){
-                        echo '<Script> alert("Guardado")</Script>';
+                     
+                     if(empty($autor)){
+                        echo '<Script> alert("Falto nombre de autor")</Script>';
+                     }elseif(empty($titulo)){
+                        echo '<Script> alert("Falto titulo ")</Script>';
+                     }elseif(empty($descripcion)){
+                        echo '<Script> alert("Falto  descripcion")</Script>';
+                     }elseif(empty($enlace)){
+                        echo '<Script> alert("Falto  enlace")</Script>';
+                     }elseif(empty($foto)){
+                        echo '<Script> alert("Falto imagen")</Script>';
                      }else{
-                        echo '<Script> alert("error")</Script>';
+                        if($podcastG -> guardar($autor,$titulo,$descripcion,$enlace,$categoria,$fecha_actual,$nombreImg,$foto,$tipoImg)){
+                           echo '<Script> alert("Guardado")</Script>';
+                        }else{
+                           echo '<Script> alert("Error")</Script>';
+                        }
+
                      }
                   }else{
-                     echo '<Script> alert("error")</Script>';
+                     echo '<Script> alert("Error")</Script>';
+                  }
+                     
+                  }else{
+                     echo '<Script> alert("Error")</Script>';
                   }
                }
             ?>
