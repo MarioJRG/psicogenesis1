@@ -1,7 +1,64 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<?php include("modulos/head.php") ?>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Psicogénesis</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon-index.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <script type="text/javascript">
+        function valida(f) {
+        var ok = true;
+        var msg = "Debes escribir contenido en los campos:\n";
+        if(f.elements[0].value == "")
+        {
+            msg += "- Mensaje\n";
+            ok = false;
+        }
+
+        if(f.elements["name"].value == "")
+        {
+            msg += "- Nombre\n";
+            ok = false;
+        }
+
+        if(f.elements["email"].value == "")
+        {
+            msg += "- Correo electrónico\n";
+            ok = false;
+        }
+
+        if(f.subject.value == "")
+        {
+            msg += "- Asunto\n";
+            ok = false;
+        }
+
+        if(ok == false)
+            alert(msg);
+        return ok;
+        }
+    </script>
+</head>
 
 <body>
     <!--[if lte IE 9]>
@@ -29,7 +86,7 @@
                 <div class="row">
                     
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate" onsubmit="return valida(this)">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">

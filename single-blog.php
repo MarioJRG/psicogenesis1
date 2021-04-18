@@ -43,7 +43,7 @@
                         <li><a class="not-active" href="#"><i class="fa fa-comments"></i><?php echo $sblog['categoria'] ?></a></li>
                      </ul>
                      <p class="excert">
-                     <?php echo $sblog['blog'] ?>
+                     <?php echo nl2br($sblog['blog']) ?>
                      </p>
                      
                   </div>

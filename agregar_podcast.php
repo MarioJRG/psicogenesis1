@@ -18,8 +18,30 @@
      </div>
      <!-- bradcam_area_end -->
 
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   
+   <script>
+   function validar(){
+      
+      //Almacenamos los valores
+      titulo=$('#titulo').val();
+      
+      //Comprobamos la longitud de caracteres
+      if (titulo.length<170){
+         return true;
+      }
+      else {
+         alert('Maximo 170 caracteres');
+         return false;
+         
+      }
+
+   }
+   </script>
+
    <!--================Blog Area =================-->
-   <form action="agregar_podcast.php" method="post" enctype='multipart/form-data'> 
+   <form action="agregar_podcast.php" method="post" enctype='multipart/form-data' onSubmit='return validar();'> 
    <section class="blog_area single-post-area section-padding">
       <div class="container">
          <div class="row">
@@ -31,25 +53,25 @@
                      </h2>
 
                      <div class="input-group-icon mt-10">
-                     <div class="icon"><i class="" aria-hidden="true"></i></div>
-                     <div class="form-select" id="default-select"">
-                     <label for="autor">Autor:</label>
-                        <input type="text" id="autor" name="autor">
-                        </div>
-                        </div>
+                        <div class="icon"><i class="" aria-hidden="true"></i></div>
+                           <div class="form-select" id="default-select"">
+                              <label for="autor">Autor:</label>
+                              <input type="text" id="autor" name="autor">
+                           </div>
+                     </div>
 
-                        <div class="input-group-icon mt-10">
-                     <div class="icon"><i class="" aria-hidden="true"></i></div>
-                     <div class="form-select" id="default-select"">
-                     <label for="titulo">Título:</label>
-                        <input type="text" id="titulo" name="titulo">
-                        </div>
-                        </div>
+                     <div class="input-group-icon mt-10">
+                       <div class="icon"><i class="" aria-hidden="true"></i></div>
+                           <div class="form-select" id="default-select">
+                              <label for="titulo">Título:</label>
+                              <input type="text" id="titulo" name="titulo">
+                           </div>
+                     </div>
                      
 
                      <div class="input-group-icon mt-10">
 								<div class="icon"><i class="fa fa-star" aria-hidden="true"></i></div>
-								<div class="form-select" id="default-select"">
+								<div class="form-select" id="default-select">
 											<select name='categoria'>
 												
 									<option value="Familia y pareja">Familia y Pareja</option>
@@ -59,20 +81,7 @@
 									</select>
 								</div>
 							</div>
-                  <!--
-                     <div class="input-group-icon mt-10">
-								<div class="icon"><i class="fa fa-user" aria-hidden="true"></i></div>
-								<div class="form-select" id="default-select"">
-											<select>
-												<option value=" 1">Autor</option>
-									<option value="1">Dhaka</option>
-									<option value="1">Dilli</option>
-									<option value="1">Newyork</option>
-									<option value="1">Islamabad</option>
-									</select>
-								</div>
-							</div>
--->
+                  
                      <label for="img">Subir imagen:</label>
                      <input type="file" name="img" >
                      <div class="col-12 mt-10">
@@ -142,7 +151,7 @@
 
                      }
                   }else{
-                     echo '<Script> alert("Error")</Script>';
+                     echo '<Script> alert("Falta Imagen del Podcast")</Script>';
                   }
                      
                   }else{

@@ -83,7 +83,7 @@
                                 <a class="d-inline-block" href="single-podcast.php?id=<?php echo $spodcast['id']?>">
                                     <h2><?php echo $spodcast['titulo']?></h2>
                                 </a>
-                                <p><?php echo $spodcast['descripcion']?></p>
+                                <p><?php echo nl2br($spodcast['descripcion'])?></p>
                                 <a class="excert" href="<?php echo $spodcast['enlace'] ?>">
                                 <?php echo $spodcast['enlace'] ?>
                                 <ul class="blog-info-link">

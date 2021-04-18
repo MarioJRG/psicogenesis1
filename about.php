@@ -145,24 +145,20 @@
 
     <!-- have_question_statr -->
     <div class="have_question">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-10 offset-xl-1">
-                        <div class="single_border">
-                            <div class="row align-items-center">
-                                <div class="col-xl-6 col-md-4 col-lg-6">
-                                    <h3>Have any Question?</h3>
-                                </div>
-                                <div class="col-xl-6 col-md-8 col-lg-6">
-                                    <div class="chat">
-                                        <a class="boxed_btn_green" href="#">
-                                            <i class="flaticon-chat"></i>
-                                            <span>Live Chat</span>
-                                        </a>
-                                        <a class="boxed_btn_green2" href="#">
-                                                get start now
-                                        </a>
-                                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <div class="single_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6 col-md-4 col-lg-6">
+                                <h3>¿Tiene alguna duda?</h3>
+                            </div>
+                            <div class="col-xl-6 col-md-8 col-lg-6">
+                                <div class="chat">
+                                   
+                                    <a class="boxed_btn_green2" href="contact.php">
+                                            Enviar correo
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -170,6 +166,7 @@
                 </div>
             </div>
         </div>
+    </div>
     <!-- have_question_end -->
 
     <!-- footer -->

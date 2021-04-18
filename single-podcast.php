@@ -42,7 +42,7 @@
                      </ul>
 
                      <p class="excert">
-                     <?php echo $spodcast['descripcion'] ?>
+                     <?php echo  nl2br($spodcast['descripcion']) ?>
                      </p>
                      
                      <a class="excert" href="<?php echo $spodcast['enlace'] ?>">
