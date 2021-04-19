@@ -28,11 +28,11 @@
       titulo=$('#titulo').val();
       
       //Comprobamos la longitud de caracteres
-      if (titulo.length<170){
+      if (titulo.length<171){
          return true;
       }
       else {
-         alert('Maximo 170 caracteres');
+         alert('El título solo acepta máximo 170 caracteres');
          return false;
          
       }

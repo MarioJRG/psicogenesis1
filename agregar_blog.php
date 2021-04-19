@@ -18,8 +18,29 @@
      </div>
      <!-- bradcam_area_end -->
 
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   
+   <script>
+   function validar(){
+      
+      //Almacenamos los valores
+      titulo=$('#titulo').val();
+      
+      //Comprobamos la longitud de caracteres
+      if (titulo.length<171){
+         return true;
+      }
+      else {
+         alert('El título solo acepta máximo 170 caracteres');
+         return false;
+         
+      }
+
+   }
+   </script>
+
    <!--================Blog Area =================-->
-   <form action="agregar_blog.php" method="post" enctype='multipart/form-data'> 
+   <form action="agregar_blog.php" method="post" enctype='multipart/form-data' onSubmit='return validar();'> 
    <section class="blog_area single-post-area section-padding">
       <div class="container">
          <div class="row">
@@ -75,20 +96,7 @@
 									</select>
 								</div>
 							</div>
-                  <!--
-                     <div class="input-group-icon mt-10">
-								<div class="icon"><i class="fa fa-user" aria-hidden="true"></i></div>
-								<div class="form-select" id="default-select"">
-											<select>
-												<option value=" 1">Autor</option>
-									<option value="1">Dhaka</option>
-									<option value="1">Dilli</option>
-									<option value="1">Newyork</option>
-									<option value="1">Islamabad</option>
-									</select>
-								</div>
-							</div>
-               -->
+                  
                <label for="img">Subir imagen:</label>
                <input type="file" name="img" >
 
